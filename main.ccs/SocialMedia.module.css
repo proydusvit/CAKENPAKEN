@@ -1,0 +1,7 @@
+.list {
+  margin-top: 60px;
+  display: flex;
+}
+.list > li {
+  margin-right: 20px;
+}/*# sourceMappingURL=SocialMedia.module.css.map */

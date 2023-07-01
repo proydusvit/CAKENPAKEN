@@ -1,0 +1,27 @@
+.footer {
+  display: flex;
+  padding: 50px 80px;
+  justify-content: space-between;
+  background: rgba(212, 212, 209, 0.5);
+}
+
+.box {
+  display: flex;
+}
+
+.link {
+  color: #000;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-right: 30px;
+}
+
+.caken {
+  color: #000;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}/*# sourceMappingURL=Footer.module.css.map */
