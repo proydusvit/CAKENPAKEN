@@ -1,0 +1,102 @@
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  z-index: -8;
+}
+
+.support {
+  margin-top: 20px;
+  position: absolute;
+  display: flex;
+  left: 55%;
+}
+.support__btn {
+  margin-right: 35px;
+  border-radius: 10px;
+  color: white;
+  font-size: 24px;
+  background-color: black;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 8px 35px;
+}
+.support__text {
+  display: flex;
+  align-items: center;
+  color: black;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.content {
+  padding-top: 350px;
+  color: white;
+  text-align: center;
+  font-size: 100px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  width: 50%;
+  height: 777px;
+  background: black;
+}
+.content_img {
+  background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("./img/Card_Merch.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.content_img__gallery {
+  background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("./img/Card_Gallery.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.content_img__crew {
+  background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("./img/Card_Crew.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.content_img__about {
+  background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("./img/Card_About.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.projects {
+  padding-top: 350px;
+  color: white;
+  text-align: center;
+  font-size: 100px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  background: black;
+  width: 100%;
+  height: 777px;
+  background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("./img/Card_Projects.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.donate {
+  width: 100%;
+  background: rgba(212, 212, 209, 0.5);
+  display: flex;
+  padding: 20px 0;
+  justify-content: center;
+  align-items: center;
+}
+.donate__fond {
+  margin-right: 30px;
+}
+.donate > p {
+  color: black;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: normal;
+  margin-right: 30px;
+}/*# sourceMappingURL=Home.module.css.map */

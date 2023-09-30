@@ -1,0 +1,110 @@
+@import "../../styles/color";
+@import "../../styles/mixin";
+
+.box {
+
+    display: flex;
+    flex-wrap: wrap;
+    z-index: -8;
+}
+
+
+
+.content {
+    padding-top: 350px;
+    color: getColor('white-for-text');
+    text-align: center;
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    width: 50%;
+    height: 777px;
+    background: getColor('primary');
+
+    &_img {
+        background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("./img/Card_Merch.jpg");
+        @include backFoto;
+
+        &__gallery {
+            background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("./img/Card_Gallery.jpg");
+            @include backFoto;
+        }
+
+        &__crew {
+            background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("./img/Card_Crew.jpg");
+            @include backFoto;
+        }
+
+        &__about {
+            background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("./img/Card_About.jpg");
+            @include backFoto;
+        }
+    }
+
+
+}
+
+.projects {
+    padding-top: 350px;
+    color: getColor('white-for-text');
+    ;
+    text-align: center;
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    background: getColor('primary');
+    width: 100%;
+    height: 777px;
+    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("./img/Card_Projects.jpg");
+    @include backFoto;
+}
+
+
+.donate {
+    width: 100%;
+    background: getColor('secondary');
+
+    &__fond {
+        margin-right: 30px;
+    }
+
+    >p {
+        color: getColor('primary');
+        font-size: 20px;
+        font-weight: 700;
+        line-height: normal;
+        margin-right: 30px;
+    }
+
+    display: flex;
+    padding: 20px 0;
+    justify-content: center;
+    align-items: center;
+}
+.list{
+    font-size: 10px;
+    display: flex;
+    >li{
+        margin-right: 30px;
+    }
+}
+.sponsor{
+    margin-top:250px ;
+    display: flex;  
+   align-items: center;
+   text-align: center;
+   justify-content: center;
+}
+.spon{
+    margin-right: 40px;
+    color: #FFF;
+    font-family: Gilroy;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;  
+}

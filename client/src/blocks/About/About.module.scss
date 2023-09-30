@@ -1,0 +1,83 @@
+@import "../../styles//color";
+@import "../../styles/mixin";
+
+.mainFoto {
+    color: getColor('white-for-text');
+
+    width: 100%;
+    height: 777px;
+    background: getColor('primary');
+    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("./img/main.jpg");
+    @include backFoto;
+
+    >h1 {
+        text-align: center;
+        font-size: 100px;
+        padding-top: 329px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+}
+
+.section {
+    padding: 150px 80px;
+
+    >ul {
+        display: flex;
+
+        justify-content: space-between;
+    }
+
+
+
+    >h2 {
+        display: flex;
+
+        justify-content: center;
+        color: #000;
+        text-align: center;
+        font-size: 36px;
+
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+        margin-bottom: 50px;
+    }
+}
+
+.img {
+    margin-bottom: 150px;
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 150px;
+
+    >h3 {
+        color: getColor('primary');
+        font-size: 36px;
+
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+
+    >p {
+        width: 950px;
+        color: getColor('primary');
+        font-size: 22px;
+
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    &__text {
+        width: 620px;
+        margin-right: 40px;
+    }
+}

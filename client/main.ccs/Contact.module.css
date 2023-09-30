@@ -1,0 +1,45 @@
+.section {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 150px;
+}
+
+.box {
+  margin-right: 110px;
+}
+.box > h3 {
+  width: 548px;
+  flex-direction: column;
+  justify-content: center;
+  color: black;
+  font-size: 46px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.box > a {
+  color: white;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border-radius: 10px;
+  background: #000;
+  padding: 20px 140px;
+}
+
+.contact > a {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+.contact > a > p {
+  margin-left: 20px;
+  color: black;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}/*# sourceMappingURL=Contact.module.css.map */

@@ -1,0 +1,38 @@
+@import "../../styles/color";
+@import "../../styles/mixin";
+
+.support {
+
+    margin-top: 20px;
+    position: absolute;
+    display: flex;
+    left: 55%;
+
+    &__btn {
+
+        margin-right: 35px;
+        border-radius: 10px;
+        color: getColor('white-for-text');
+        
+        font-size: 24px;
+        background-color: getColor('primary');
+
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        padding: 8px 35px;
+    }
+
+    &__text {
+        display: flex;
+        align-items: center;
+        color: getColor('primary');
+        padding: 0 30px;
+        border-radius: 10px;
+border: 1px solid #000;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+}

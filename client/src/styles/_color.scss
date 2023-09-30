@@ -1,0 +1,11 @@
+$color: (
+    'primary': black,
+    'white-for-text': white,
+    'secondary': rgba(212, 212, 209, 0.50),
+    'background':white,
+
+);
+
+@function getColor($key) {
+    @return map-get($color, $key);
+}
