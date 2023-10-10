@@ -1,11 +1,12 @@
 import { useRouter } from "next/router";
+import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 import styles from "./Header.module.scss";
-import { useState } from "react";
-import Image from "next/image";
 import Logo from "../../assets/images/Logo_header.png";
 import SocialMedia from "./SocialMedia";
+
 const Header = () => {
   const { pathname } = useRouter();
   const [isClicked, setIsClicked] = useState(false);

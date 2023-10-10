@@ -1,62 +1,50 @@
-import React, { useState } from "react";
-import foto from "../../assets/images/Logo_header.png"
+import axios from "axios";
+import { useEffect, useState } from "react";
 import styles from "./Team.module.scss";
-import Image from "next/image";
-// const data = [
-//   { id: 1, name: "Приклад 1", details: "Детальна інформація про приклад 1" },
-//   { id: 2, name: "Приклад 2", details: "Детальна інформація про приклад 2" },
-//   { id: 3, name: "Приклад 3", details: "Детальна інформація про приклад 3" }
-//   // Додайте інші елементи списку тут
-// ];
+import { useTranslation } from "next-i18next";
+import { useRouter } from "next/router";
 
 const Team = () => {
-  // const [openItemIds, setOpenItemIds] = useState([]);
+  const [data, setData] = useState([]);
+  const { locale } = useRouter();
+  const { t } = useTranslation("team");
 
-  // const handleItemClick = (id) => {
-  //   setOpenItemIds(
-  //     openItemIds.includes(id)
-  //       ? openItemIds.filter((prevId) => prevId !== id)
-  //       : [...openItemIds, id]
-  //   );
-  // };
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          `http://localhost:1337/api/teams?populate=*&locale=${locale}`
+        );
+        const data = response.data.data;
+        console.log(data);
+        setData(data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, [locale]);
 
   return (
     <section className={styles.App}>
-      {/* <h1>Список з детальною інформацією</h1>
-      <ul>
-        {data.map((item) => (
-          <li
-            key={item.id}
-            className={openItemIds.includes(item.id) ? "active" : ""}
-          >
-            <button onClick={() => handleItemClick(item.id)}>
-              {item.name}
-            </button>
-            {openItemIds.includes(item.id) && (
-              <div className="details">
-                <h2>Деталі:</h2>
-                <p>{item.details}</p>
-              </div>
-            )}
-          </li>
-        ))}
-      </ul> */}
       <h1>Team</h1>
-      <div >
-        <ul  className={styles.list}>
-        <li><Image src={foto} width={400} height={400}/></li>
-        <li><Image src={foto} width={400} height={400}/></li>
-        <li><Image src={foto} width={400} height={400}/></li>
-        <li><Image src={foto} width={400} height={400}/></li>
-        <li><Image src={foto} width={400} height={400}/></li>
-        <li><Image src={foto} width={400} height={400}/></li>
-        <li><Image src={foto} width={400} height={400}/></li>
-        <li><Image src={foto} width={400} height={400}/></li>
-        <li><Image src={foto} width={400} height={400}/></li>
-        <li><Image src={foto} width={400} height={400}/></li>
+      <h2>{t("hi")}</h2>
+      <div>
+        <ul className={styles.list}>
+          {data?.map((item) => (
+            <li key={item.id}>
+              <p>{item.attributes.name}</p>
+              <img
+                src={`http://localhost:1337${item.attributes.foto.data[0].attributes.url}`}
+                alt={item.attributes.name}
+                width={500}
+                height={500}
+              />
+            </li>
+          ))}
         </ul>
       </div>
-
     </section>
   );
 };

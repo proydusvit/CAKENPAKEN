@@ -1,9 +1,9 @@
-import Layout from "../layout/Layout"
-import Homes from "../blocks/Home/Home";
+import Layout from "../layout/Layout";
+import Main from "../blocks/Home/Home";
 export default function Home() {
   return (
-    <Layout title="Home">
-      <Homes />
+    <Layout title="☆">
+      <Main />
     </Layout>
   );
 }

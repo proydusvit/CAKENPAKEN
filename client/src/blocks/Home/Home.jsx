@@ -6,15 +6,14 @@ import styles from "./Home.module.scss";
 import ComeBack from "./img/Comeback.png";
 import Prutyla from "./img/Prutyka.png";
 
-import Idlo from "./img/sponsor/IDLO.png"
-import Gorgany from "./img/sponsor/Gorgany.png"
-import Objerky from "./img/sponsor/Objerky.png"
-import Snow from "./img/sponsor/logo_white.png"
+import Idlo from "./img/sponsor/IDLO.png";
+import Gorgany from "./img/sponsor/Gorgany.png";
+import Objerky from "./img/sponsor/Objerky.png";
+import Snow from "./img/sponsor/logo_white.png";
 
 const Home = () => {
   return (
     <section>
-     
       <div className={styles.box}>
         <Link
           href="/shop"
@@ -29,23 +28,34 @@ const Home = () => {
         >
           GALLERY
         </Link>
-        <div className={styles.projects}>
-        <Link href="/projects" >
+        <Link className={styles.projects} href="/projects">
           PROJECTS
-
         </Link>
-
         <div className={styles.sponsor}>
-        <p className={styles.spon}>Our sponsor:</p>    
-        <ul className={styles.list}>
-  <li><Image src={Idlo} width={115} height={36}/></li>
-  <li><Image src={Gorgany} width={115} height={36}/></li>
-  <li><Image src={Objerky} width={115} height={36}/></li>
-  <li><Image src={Snow} width={115} height={36}/></li>
- </ul>
+          <p className={styles.spon}>Our sponsor:</p>
+          <ul className={styles.list}>
+            <li>
+              <Link href="https://iidlo.com/">
+                <Image src={Idlo} width={115} height={36} />
+              </Link>
+            </li>
+            <li>
+              <Link href="https://www.gorgany.com/">
+                <Image src={Gorgany} width={115} height={36} />
+              </Link>
+            </li>
+            <li>
+              <Link href="https://objerky.com/en">
+                <Image src={Objerky} width={115} height={36} />
+              </Link>
+            </li>
+            <li>
+              <Link href="https://www.snowstuff.com.ua/">
+                <Image src={Snow} width={115} height={36} />
+              </Link>
+            </li>
+          </ul>
         </div>
-
-        </div >
 
         <div className={styles.donate}>
           <p>

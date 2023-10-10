@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-const getTitle = (title) => ` CAKENPAKEN |${title} `;
+const getTitle = (title) => `CAKENPAKEN | ${title}`;
 
 const Meta = ({ title, description, children }) => {
   return (
@@ -17,6 +17,19 @@ const Meta = ({ title, description, children }) => {
               name="viewport"
               content="width=device-width, initial-scale=1"
             />
+
+            {/* Підключення зовнішніх шрифтів Google Fonts */}
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link
+              rel="preconnect"
+              href="https://fonts.gstatic.com"
+              crossOrigin="true"
+            />
+            <link
+              href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap"
+              rel="stylesheet"
+            />
+
             <link rel="icon" href="/favicon.ico" />
           </>
         ) : (

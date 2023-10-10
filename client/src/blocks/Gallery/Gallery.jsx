@@ -1,57 +1,49 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
-import { initLightboxJS } from "lightbox.js-react";
-import "lightbox.js-react/dist/index.css";
-import { SlideshowLightbox } from "lightbox.js-react";
+import api from "./services";
+import { useRouter } from "next/router";
+import Foto from "./Foto";
+import Category from "./Category";
 
 const Gallery = () => {
   const [data, setData] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [menuOpen, setMenuOpen] = useState(true); // Додаємо стейт для відстеження стану меню
+
+  const router = useRouter();
+  const { category } = router.query;
 
   useEffect(() => {
-    initLightboxJS("Insert License key", "Insert plan type here");
-  });
-
-  useEffect(() => {
-    const fetchData = async () => {
+    const fetchDataFromApi = async () => {
       try {
-        const response = await axios.get(
-          "http://localhost:1337/api/photo-colections?populate=*"
-        );
-        const data = response.data.data;
-        console.log(data);
-        setData(data);
+        const fetchedData = await api.fetchGallery();
+        console.log(fetchedData);
+        setData(fetchedData);
+
+        if (category) {
+          setSelectedCategory(category);
+          setMenuOpen(false);
+        }
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
 
-    fetchData();
-  }, []);
+    fetchDataFromApi();
+  }, [category]); // Тепер useEffect викликається тільки при зміні параметру `category` з роутера
 
-  const images = data.map((item) => ({
-    src: `http://localhost:1337${item.attributes.photo.data.attributes.url}`
+  const filteredData = data.filter(
+    (item) => item.attributes.category === selectedCategory
+  );
+
+  const images = filteredData.map((item) => ({
+    id: item.id,
+    src: `http://localhost:1337${item.attributes.photo.data.attributes.url}`,
   }));
-  console.log(data);
+
   return (
     <>
-      <SlideshowLightbox
-        lightboxIdentifier="uniqueLightboxId"
-        framework="next"
-        images={images}
-      >
-        {images?.map((item, index) => (
-          <img
-            key={index}
-            alt={`Image ${index}`}
-            className="w-full rounded"
-            height={500}
-            width={500}
-            data-lightboxjs="uniqueLightboxId"
-            quality={80}
-            src={item.src}
-          />
-        ))}
-      </SlideshowLightbox>
+      {menuOpen && <Category />}
+      {!menuOpen && <Foto data={images} />}
     </>
   );
 };
