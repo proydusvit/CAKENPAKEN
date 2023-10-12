@@ -2,15 +2,16 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-
+import { useTranslation } from "next-i18next";
 import styles from "./Header.module.scss";
 import Logo from "../../assets/images/Logo_header.png";
 import SocialMedia from "./SocialMedia";
+import ButtonHeader from "./ButtonHeader";
 
 const Header = () => {
   const { pathname } = useRouter();
   const [isClicked, setIsClicked] = useState(false);
-
+  const { t } = useTranslation("common");
   const handleClick = () => {
     setIsClicked(!isClicked);
   };
@@ -18,16 +19,7 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <div className={styles.nav}>
-          <button
-            className={`${styles.button} ${isClicked ? styles.clicked : ""}`}
-            onClick={handleClick}
-          >
-            <span className={styles.line}></span>
-            <span className={styles.line}></span>
-            <span className={styles.line}></span>
-          </button>
-        </div>
+        <ButtonHeader handleClick={handleClick} isClicked={isClicked} />
         <div className={`${styles.content} ${isClicked ? styles.visible : ""}`}>
           <nav>
             <ul className={styles.list}>
@@ -35,60 +27,60 @@ const Header = () => {
                 <Link
                   href="/projects"
                   className={`${styles.link}  ${
-                    pathname === "/" ? styles.active : ""
+                    pathname === "/projects" ? styles.active : ""
                   }`}
                 >
-                  Projects
+                  {t("projects")}
                 </Link>
               </li>
               <li>
                 <Link
                   href="/shop"
                   className={`${styles.link}  ${
-                    pathname === "/" ? styles.active : ""
+                    pathname === "/shop" ? styles.active : ""
                   }`}
                 >
-                  Shop
+                  {t("shop")}
                 </Link>
               </li>
               <li>
                 <Link
                   href="/events"
                   className={`${styles.link}  ${
-                    pathname === "/" ? styles.active : ""
+                    pathname === "/events" ? styles.active : ""
                   }`}
                 >
-                  Events
+                  {t("events")}
                 </Link>
               </li>
               <li>
                 <Link
                   href="/about"
                   className={`${styles.link}  ${
-                    pathname === "/" ? styles.active : ""
+                    pathname === "/about" ? styles.active : ""
                   }`}
                 >
-                  About Us
+                  {t("about")}
                 </Link>
               </li>
               <li>
                 <Link
                   href="/team"
                   className={`${styles.link}  ${
-                    pathname === "/" ? styles.active : ""
+                    pathname === "/team" ? styles.active : ""
                   }`}
                 >
-                  Crew
+                  {t("crew")}
                 </Link>
               </li>
               <li>
                 <Link
                   href="/gallery"
                   className={`${styles.link}  ${
-                    pathname === "/" ? styles.active : ""
+                    pathname === "/gallety" ? styles.active : ""
                   }`}
                 >
-                  Gallery
+                  {t("gallery")}
                 </Link>
               </li>
             </ul>

@@ -1,114 +1,58 @@
 .header {
-
-    position: fixed;
-    width: 407px;
-    height: 91px;
-    flex-shrink: 0;
-   box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.25);
-margin-left:80px;
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
-    background-color: white;
-
+  position: fixed;
+  width: 336.038px;
+  height: 91px;
+  flex-shrink: 0;
+  box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.25);
+  margin-left: 80px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  background-color: white;
 }
 
 .container {
-    position: relative;
-}
-
-.nav {
-    width: 100%;
-
-    display: flex;
-    justify-content: flex-start;
-
-}
-
-.button {
-    margin-left: 35px;
-    margin-top: 23px;
-    margin-bottom: 23px;
-    margin-right: 70px;
-    width: 4em;
-    height: 4em;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.line {
-    width: 2.5em;
-    height: 0.3em;
-    background-color: #000;
-    margin: 0.3em;
-    transition: transform 0.5s ease-out;
-}
-
-.clicked .line:nth-child(1) {
-    transform: rotate(45deg) translate(0.5em, 0.5em);
-}
-
-.clicked .line:nth-child(2) {
-    transform: scale(0);
-}
-
-.clicked .line:nth-child(3) {
-    transform: rotate(-45deg) translate(0.5em, -0.5em);
+  position: relative;
 }
 
 .content {
-    height: 0;
-    position: absolute;
-    width: 407px;
-    z-index: -1;
-    overflow: hidden;
-    padding: 0 40px;
-
+  height: 0;
+  position: absolute;
+  width: 336.038px;
+  z-index: -1;
+  overflow: hidden;
+  padding: 0 40px;
 }
 
 .visible {
-
-    transition: height 0.5s ease-out;
-    background: white;
-    height: 450px;
-    width: 407px;
-    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-    padding: 35px 40px;
-    z-index: 5;
-
+  transition: height 0.5s ease-out;
+  background: white;
+  height: 390px;
+  width: 336.038px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  padding: 35px 40px;
+  z-index: 5;
 }
 
 .list {
+  > li {
+    margin-bottom: 15px;
+  }
 
-
-    >li {
-        margin-bottom: 20px;
-
-    }
-
-    >li:last-child {
-        margin-bottom: 0;
-    }
+  > li:last-child {
+    margin-bottom: 0;
+  }
 }
 
-
-
 .link {
+  color: #000;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-size: 25px;
 
-    color: #000;
-
-    font-size: 25px;
-
-    font-weight: 600;
-    line-height: normal;
-
-    &:hover,
-    &.active {
-        color: #000;
-    }
+  &:hover,
+  &.active {
+    font-weight: 700;
+  }
 }

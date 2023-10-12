@@ -1,0 +1,42 @@
+@import "../../styles//mixin";
+.section {
+  display: flex;
+  padding: 154px 0 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.name {
+  font-size: 50px;
+
+  line-height: 58px; /* 116% */
+  letter-spacing: -2px;
+  text-transform: uppercase;
+  margin-bottom: 45px;
+}
+.category {
+  width: 100%;
+  height: 700px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url("./img/film.jpg");
+  @include backFoto;
+  color: #fefefe;
+  text-align: center;
+
+  font-size: 100px;
+  padding-top: 308px;
+
+  font-weight: 700;
+  line-height: normal;
+  &_two {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4)
+      ),
+      url("./img/trail.jpg");
+  }
+}

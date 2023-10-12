@@ -1,3 +1,10 @@
 {
-    "merch":"Merch"
+  "donate": "Donate",
+  "support": "Support Ukraine",
+  "projects": "Projects",
+  "about": "About us",
+  "shop": "Shop",
+  "crew": "Crew",
+  "events": "Events",
+  "gallery": "Gallery"
 }
