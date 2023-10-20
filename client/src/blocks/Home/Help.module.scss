@@ -1,0 +1,23 @@
+.donate {
+  width: 100%;
+  background: black;
+
+  &__fond {
+    margin-right: 30px;
+  }
+
+  > p {
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28px; /* 116.667% */
+    letter-spacing: -0.96px;
+    text-transform: uppercase;
+    margin-right: 30px;
+  }
+
+  display: flex;
+  padding: 20px 0;
+  justify-content: center;
+  align-items: center;
+}

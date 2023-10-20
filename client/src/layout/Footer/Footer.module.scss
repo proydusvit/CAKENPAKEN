@@ -1,8 +1,17 @@
 .footer {
-  display: flex;
-  padding: 50px 80px;
-  justify-content: space-between;
-  background: white;
+  padding: 100px 15px;
+
+  background: black;
+
+  &_box {
+    align-items: center;
+    display: flex;
+    width: 1440px;
+    width: 1440px;
+    margin: 0 auto;
+    padding: 0 15px 0;
+    justify-content: space-between;
+  }
 }
 
 .box {
@@ -10,7 +19,7 @@
 }
 
 .link {
-  color: #000;
+  color: white;
   font-size: 20px;
 
   line-height: 24px; /* 120% */
@@ -20,10 +29,26 @@
 }
 
 .caken {
-  color: #000;
+  color: white;
   font-size: 20px;
 
   line-height: 24px; /* 120% */
   letter-spacing: -0.8px;
   text-transform: capitalize;
+}
+.develop {
+  color: white;
+  display: grid;
+  font-size: 18px;
+
+  font-weight: 400;
+  line-height: 22px; /* 122.222% */
+  letter-spacing: -0.72px;
+  text-decoration-line: underline;
+  > a {
+    margin-bottom: 10px;
+  }
+  > a:last-child {
+    margin-bottom: 0;
+  }
 }

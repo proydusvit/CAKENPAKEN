@@ -12,8 +12,10 @@
   color: getColor("white-for-text");
   text-align: center;
   font-size: 100px;
-
-  line-height: normal;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120px; /* 120% */
+  letter-spacing: -4px;
   text-transform: uppercase;
   width: 50%;
   height: 777px;
@@ -43,6 +45,23 @@
       @include backFoto;
     }
   }
+  // &_img::after {
+  //   display: inline-flex;
+  //   content: "";
+  //   background-image: url("./img/soon.svg");
+  //   transform: rotate(-7.858deg);
+  //   position: absolute;
+  //   left: 25%;
+  //   top: 55%;
+
+  //   height: 70px;
+  //   width: 180px;
+  //   @include backFoto;
+  // }
+}
+.soon {
+  margin-left: 215px;
+  margin-top: -80px;
 }
 
 .projects {

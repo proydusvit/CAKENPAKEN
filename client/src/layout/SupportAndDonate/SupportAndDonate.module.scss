@@ -1,0 +1,57 @@
+@import "../../styles/color";
+@import "../../styles/mixin";
+.box {
+  display: flex;
+  justify-content: flex-end;
+}
+.support {
+  margin-top: 41px;
+  position: absolute;
+  display: flex;
+  margin-right: 80px;
+
+  &__donate {
+    font-size: 22px;
+    line-height: 28px; /* 127.273% */
+    letter-spacing: -0.88px;
+    text-transform: capitalize;
+
+    color: getColor("white-for-text");
+    background-color: getColor("primary");
+    border-radius: 30px;
+
+    width: 163px;
+    padding: 10px 20px;
+    margin-right: 30px;
+
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__ukraine {
+    color: getColor("primary");
+    padding: 10px 30px;
+    border: 1px solid #000;
+    text-align: center;
+    font-size: 22px;
+    width: 262px;
+    line-height: 28px; /* 127.273% */
+    letter-spacing: -0.88px;
+    text-transform: capitalize;
+    border-radius: 30px;
+  }
+}
+
+.lang {
+  margin-left: 40px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: normal;
+}

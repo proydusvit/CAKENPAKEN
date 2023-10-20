@@ -1,0 +1,54 @@
+.header {
+  position: fixed;
+  width: 336.038px;
+  height: 91px;
+  flex-shrink: 0;
+  box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.25);
+  margin-left: 80px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  z-index: 100;
+}
+
+.container {
+  position: relative;
+}
+
+.content {
+  height: 0;
+  position: absolute;
+  width: 336.038px;
+  z-index: -1;
+  overflow: hidden;
+  padding: 0 40px;
+}
+
+.visible {
+  transition: height 0.5s ease-out;
+  background: white;
+  height: 390px;
+  width: 336.038px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  padding: 35px 40px;
+  z-index: 5;
+}
+
+.list > li {
+  margin-bottom: 15px;
+}
+.list > li:last-child {
+  margin-bottom: 0;
+}
+
+.link {
+  color: #000;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-size: 25px;
+}
+.link:hover, .link.active {
+  font-weight: 700;
+}/*# sourceMappingURL=Header.module.css.map */

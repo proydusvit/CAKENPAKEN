@@ -7,15 +7,15 @@ import Category from "./Category";
 const Gallery = () => {
   const [data, setData] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(null);
-  const [menuOpen, setMenuOpen] = useState(true); // Додаємо стейт для відстеження стану меню
-
+  const [menuOpen, setMenuOpen] = useState(true);
+  const { locale } = useRouter();
   const router = useRouter();
   const { category } = router.query;
 
   useEffect(() => {
     const fetchDataFromApi = async () => {
       try {
-        const fetchedData = await api.fetchGallery();
+        const fetchedData = await api.fetchGallery({ locale });
         console.log(fetchedData);
         setData(fetchedData);
 
@@ -29,7 +29,7 @@ const Gallery = () => {
     };
 
     fetchDataFromApi();
-  }, [category]); // Тепер useEffect викликається тільки при зміні параметру `category` з роутера
+  }, [category, locale]);
 
   const filteredData = data.filter(
     (item) => item.attributes.category === selectedCategory
@@ -43,7 +43,7 @@ const Gallery = () => {
   return (
     <>
       {menuOpen && <Category />}
-      {!menuOpen && <Foto data={images} />}
+      {!menuOpen && <Foto data={images} info={data} />}
     </>
   );
 };

@@ -1,5 +1,5 @@
 import Layout from "../../layout/Layout";
-import Movie from "../../blocks/Projects/Film/Film";
+import Movie from "../../blocks/Projects/Film/Film.jsx";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export const getStaticProps = async ({ locale }) => {

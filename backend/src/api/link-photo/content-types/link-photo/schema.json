@@ -4,31 +4,57 @@
   "info": {
     "singularName": "link-photo",
     "pluralName": "link-photos",
-    "displayName": "LinkPhoto"
+    "displayName": "LinkPhoto",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "category": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "name": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "foto": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
       ],
-      "type": "media",
-      "multiple": true
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
     },
     "data": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

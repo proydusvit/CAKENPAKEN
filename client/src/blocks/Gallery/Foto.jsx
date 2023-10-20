@@ -2,30 +2,48 @@ import { initLightboxJS, SlideshowLightbox } from "lightbox.js-react";
 import "lightbox.js-react/dist/index.css";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
+import { useTranslation } from "next-i18next";
+import styles from "./Foto.module.scss";
 
-const Foto = ({ data }) => {
+const Foto = ({ data, info }) => {
   const router = useRouter();
+  const { t } = useTranslation("gallery");
 
   useEffect(() => {
     initLightboxJS("Insert License key", "Insert plan type here");
   });
 
-  const imageWithId = data.find((item) => item.id === 2 || item.id === 4);
+  const filteredData = info.filter(
+    (item) => item.attributes.title_foto === true
+  );
+  console.log(filteredData);
+  // const ImageTitle = filteredData.map((item) => ({
+  //   src: `http://localhost:1337${item.attributes.photo.data.attributes.url}`,
+  // }));
 
-  if (!imageWithId) {
-    // Якщо об'єкт з ID: 2 не знайдений, можна відобразити повідомлення про помилку або щось інше.
-    return <div>Image not found</div>;
-  }
-
-  const imageUrl = imageWithId.src;
+  // if (!imageWithId) {
+  //   // Якщо об'єкт з ID: 2 не знайдений, можна відобразити повідомлення про помилку або щось інше.
+  //   return <div>Image not found</div>;
+  // }
 
   return (
-    <>
+    <section className={styles.section}>
       <button type="button" onClick={() => router.back()}>
         Click here to go back
       </button>
-
-      <img src={imageUrl} />
+      <div
+        className={styles.foto}
+        style={{
+          backgroundImage: `linear-gradient(to bottom, #00000033, #00000033), url(${imageUrl})`,
+        }}
+      >
+        {info.map((item) => (
+          <div key={item.id}>
+            <h2 className={styles.name}>{item.attributes.name}</h2>
+            <p className={styles.season}>{item.attributes.season}</p>
+          </div>
+        ))}
+      </div>
 
       <SlideshowLightbox
         lightboxIdentifier="uniqueLightboxId"
@@ -45,7 +63,7 @@ const Foto = ({ data }) => {
           />
         ))}
       </SlideshowLightbox>
-    </>
+    </section>
   );
 };
 

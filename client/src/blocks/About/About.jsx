@@ -1,6 +1,6 @@
 import styles from "./About.module.scss";
 import Image from "next/image";
-
+import Section from "../../components/Section/Section";
 import { useTranslation } from "next-i18next";
 
 import foto from "./img/foto.jpg";
@@ -20,11 +20,10 @@ const About = () => {
         <h1> {t("about")}</h1>
       </div>
 
-      <section className={styles.section}>
+      <Section className={styles.section}>
         <h2 className={styles.section__caken}> {t("caken")}</h2>
         <ul className={styles.section__list}>
           <li>
-            {" "}
             <Image
               className={styles.section__img}
               src={main3}
@@ -97,7 +96,7 @@ const About = () => {
             />
           </li>
         </ul>
-      </section>
+      </Section>
     </div>
   );
 };

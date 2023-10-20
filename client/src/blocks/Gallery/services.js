@@ -1,9 +1,9 @@
 import axios from "axios";
 
-async function fetchGallery() {
+async function fetchGallery({ locale }) {
   try {
     const response = await axios.get(
-      "http://localhost:1337/api/photo-colections?populate=*"
+      `http://localhost:1337/api/foto-colections?populate=*&locale=${locale}`
     );
     return response.data.data;
   } catch (error) {
@@ -11,10 +11,10 @@ async function fetchGallery() {
   }
 }
 
-async function fetchCategory() {
+async function fetchCategory({ locale }) {
   try {
     const response = await axios.get(
-      "http://localhost:1337/api/link-photos?populate=*"
+      `http://localhost:1337/api/link-photos?populate=*&locale=${locale}`
     );
     return response.data.data;
   } catch (error) {

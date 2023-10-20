@@ -1,0 +1,30 @@
+.list {
+  font-size: 10px;
+  display: flex;
+
+  margin-bottom: 150px;
+  > li {
+    margin-right: 80px;
+  }
+  > li:last-child {
+    margin-right: 0;
+  }
+}
+.sponsor {
+  margin-left: auto;
+  margin-right: auto;
+
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.spon {
+  margin-top: 100px;
+  margin-bottom: 75px;
+  color: black;
+  font-size: 50px;
+
+  line-height: 58px; /* 116% */
+  letter-spacing: -2px;
+  text-transform: uppercase;
+}
