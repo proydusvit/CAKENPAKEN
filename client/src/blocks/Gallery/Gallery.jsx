@@ -43,7 +43,7 @@ const Gallery = () => {
   return (
     <>
       {menuOpen && <Category />}
-      {!menuOpen && <Foto data={images} info={data} />}
+      {!menuOpen && <Foto image={images} />}
     </>
   );
 };
