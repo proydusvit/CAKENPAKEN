@@ -15,7 +15,7 @@ const Gallery = () => {
   useEffect(() => {
     const fetchDataFromApi = async () => {
       try {
-        const fetchedData = await api.fetchGallery({ locale });
+        const fetchedData = await api.fetchGallery({ locale, category });
         console.log(fetchedData);
         setData(fetchedData);
 
@@ -42,8 +42,8 @@ const Gallery = () => {
 
   return (
     <>
-      {menuOpen && <Category />}
-      {!menuOpen && <Foto image={images} />}
+      <Category />
+      <Foto image={images} />
     </>
   );
 };

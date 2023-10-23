@@ -45,7 +45,7 @@ const Foto = ({ image }) => {
 
   return (
     <section className={styles.section}>
-      <button type="button" onClick={() => router.back()}>
+      {/* <button type="button" onClick={() => router.back()}>
         Click here to go back
       </button>
       {images.map((item) => (
@@ -59,7 +59,7 @@ const Foto = ({ image }) => {
           <h2 className={styles.name}>{item.name}</h2>
           <p className={styles.season}>{item.season}</p>
         </div>
-      ))}
+      ))} */}
       <SlideshowLightbox
         lightboxIdentifier="uniqueLightboxId"
         framework="next"

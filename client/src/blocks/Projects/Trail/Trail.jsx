@@ -24,21 +24,40 @@ const Trail = () => {
         <ul className={styles.list}>
           <div>
             <li className={styles.img1}>
-              <Image src={trail2} alt="main-foto" width={738} height={490} />
+              <Image
+                className={styles.img}
+                src={trail2}
+                alt="main-foto"
+                width={738}
+                height={490}
+              />
             </li>
           </div>
           <div>
             <li className={styles.img2}>
-              <Image src={trail1} alt="main-foto" width={522} height={229} />
+              <Image
+                className={styles.img}
+                src={trail1}
+                alt="main-foto"
+                width={522}
+                height={229}
+              />
             </li>
             <li className={styles.img3}>
-              <Image src={trail3} alt="main-foto" width={522} height={243} />
+              <Image
+                className={styles.img}
+                src={trail3}
+                alt="main-foto"
+                width={522}
+                height={243}
+              />
             </li>
           </div>
         </ul>
         <h4 className={styles.title}>{t("titleT")}</h4>
         <div className={styles.video}>
           <iframe
+            className={styles.frame}
             width="1065"
             height="550"
             src="https://www.youtube.com/embed/rTUaPPWdUgM?si=lEHMBiT71USE5uuS"

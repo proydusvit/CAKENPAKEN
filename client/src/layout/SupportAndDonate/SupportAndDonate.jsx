@@ -11,6 +11,7 @@ const Support = () => {
   const [color, setColor] = useState("white");
   const [secondColor, setSecondColor] = useState("black");
   const [border, setNorder] = useState("black");
+
   useEffect(() => {
     // Определіть список роутів, на яких потрібно встановити білий фон
     const whiteBackgroundRoutes = ["/shop", "/projects/film"];

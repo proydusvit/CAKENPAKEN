@@ -1,14 +1,28 @@
 @import "../../styles/color";
 @import "../../styles/mixin";
+
+$small-screen: 767px;
+$medium-screen: 768px;
+$large-screen: 1440px;
+
 .box {
   display: flex;
   justify-content: flex-end;
 }
+
 .support {
   margin-top: 41px;
   position: absolute;
   display: flex;
-  margin-right: 80px;
+  margin-right: 60px;
+  @media (min-width: $medium-screen) and (max-width: 1439px) {
+    margin-top: 37px;
+    margin-right: 20px;
+  }
+  @media (max-width: $small-screen) {
+    margin-top: 30px;
+    margin-right: 25px;
+  }
 
   &__donate {
     font-size: 22px;
@@ -28,6 +42,15 @@
     text-align: center;
     align-items: center;
     justify-content: center;
+    @media (min-width: $medium-screen) and (max-width: 1439px) {
+      padding: 5px 0;
+      font-size: 14px;
+
+      margin-right: 10px;
+    }
+    @media (max-width: $small-screen) {
+      display: none;
+    }
   }
 
   &__ukraine {
@@ -41,10 +64,19 @@
     letter-spacing: -0.88px;
     text-transform: capitalize;
     border-radius: 30px;
+    @media (min-width: $medium-screen) and (max-width: 1439px) {
+      font-size: 14px;
+      width: 100%;
+      padding: 5px 0;
+    }
+    @media (max-width: $small-screen) {
+      display: none;
+    }
   }
 }
 
 .lang {
+  z-index: 110;
   margin-left: 40px;
   background-color: transparent;
   border: none;
@@ -54,4 +86,8 @@
   font-size: 24px;
   font-weight: 600;
   line-height: normal;
+  @media (min-width: $medium-screen) and (max-width: 1439px) {
+    font-size: 14px;
+    margin-left: 20px;
+  }
 }

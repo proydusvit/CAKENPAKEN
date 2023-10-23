@@ -1,10 +1,10 @@
+$small-screen: 767px;
+$medium-screen: 768px;
+$large-screen: 1440px;
+
 .donate {
   width: 100%;
   background: black;
-
-  &__fond {
-    margin-right: 30px;
-  }
 
   > p {
     color: white;
@@ -14,10 +14,34 @@
     letter-spacing: -0.96px;
     text-transform: uppercase;
     margin-right: 30px;
+    @media (min-width: $medium-screen) and (max-width: 1439px) {
+      font-size: 22px;
+      padding: 8px 0;
+      font-weight: 400;
+      line-height: 23.2px; /* 105.455% */
+      font-variant: small-caps;
+      letter-spacing: -0.88px;
+      margin-right: 10px;
+    }
+    @media (max-width: $small-screen) {
+      font-size: 25px;
+      padding: 20px 0;
+      font-weight: 400;
+      line-height: 35px; /* 140% */
+      font-variant: small-caps;
+      letter-spacing: -1px;
+      margin-right: 10px;
+    }
   }
 
   display: flex;
   padding: 20px 0;
   justify-content: center;
   align-items: center;
+}
+.img {
+  @media (min-width: $medium-screen) and (max-width: 1439px) {
+    width: 40px;
+    height: 40px;
+  }
 }

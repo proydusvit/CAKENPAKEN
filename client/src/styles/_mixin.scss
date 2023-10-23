@@ -1,4 +1,8 @@
 @mixin backFoto {
-    background-size: cover;
-    background-position: 50% 50%;
+  background-size: cover;
+  background-position: 50% 50%;
 }
+
+$small-screen: 768px;
+$medium-screen: 992px;
+$large-screen: 1200px;

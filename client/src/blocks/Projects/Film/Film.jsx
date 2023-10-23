@@ -24,7 +24,7 @@ const Film = () => {
         <ul className={styles.list}>
           <li>
             <Image
-              className={styles.section__img}
+              className={styles.img}
               src={im1}
               alt="main-foto"
               width={413}
@@ -33,7 +33,7 @@ const Film = () => {
           </li>
           <li>
             <Image
-              className={styles.section__img}
+              className={styles.img}
               src={im2}
               alt="main-foto"
               width={413}
@@ -42,7 +42,7 @@ const Film = () => {
           </li>
           <li>
             <Image
-              className={styles.section__img}
+              className={styles.img}
               src={im3}
               alt="main-foto"
               width={413}
@@ -53,6 +53,7 @@ const Film = () => {
         <h4 className={styles.title}>{t("title")}</h4>
         <div className={styles.video}>
           <iframe
+            className={styles.frame}
             width="1065"
             height="550"
             src="https://www.youtube.com/embed/rTUaPPWdUgM?si=lEHMBiT71USE5uuS"

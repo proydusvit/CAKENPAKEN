@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import api from "./services";
 import styles from "./Category.module.scss";
 import { useRouter } from "next/router";
+import Link from "next/link";
 import { useTranslation } from "next-i18next";
-
 const Category = () => {
   const [data, setData] = useState([]);
   const { locale } = useRouter();
@@ -34,7 +34,7 @@ const Category = () => {
           const imageUrl = `http://localhost:1337${firstImageData.attributes.url}`;
 
           return (
-            <a
+            <Link
               key={item.id}
               href={`/gallery?category=${item.attributes.category}`}
               className={styles.links}
@@ -45,7 +45,7 @@ const Category = () => {
               <h3 className={styles.name}>{item.attributes.name}</h3>
 
               <p className={styles.date}>{item.attributes.data}</p>
-            </a>
+            </Link>
           );
         })}
       </div>

@@ -1,3 +1,7 @@
+$small-screen: 767px;
+$medium-screen: 768px;
+$large-screen: 1440px;
+
 .header {
   position: fixed;
   width: 336.038px;
@@ -10,6 +14,20 @@
   align-items: center;
   background-color: white;
   z-index: 100;
+  @media (min-width: $medium-screen) and (max-width: 1439px) {
+    padding: 10px 25px 10px 15px;
+    font-size: 14px;
+    height: 64px;
+    width: auto;
+    margin-right: 10px;
+  }
+  @media (max-width: $small-screen) {
+    position: absolute;
+    margin: 0;
+    background-color: transparent;
+    box-shadow: none;
+    width: 100vw;
+  }
 }
 
 .container {
@@ -23,6 +41,11 @@
   z-index: -1;
   overflow: hidden;
   padding: 0 40px;
+  @media (min-width: $medium-screen) and (max-width: 1439px) {
+    margin-left: -15px;
+    margin-top: 20px;
+    width: auto;
+  }
 }
 
 .visible {
@@ -33,6 +56,12 @@
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
   padding: 35px 40px;
   z-index: 5;
+  @media (min-width: $medium-screen) and (max-width: 1439px) {
+    width: 233px;
+  }
+  @media (max-width: $small-screen) {
+    width: 100vw;
+  }
 }
 
 .list {
@@ -55,5 +84,11 @@
   &:hover,
   &.active {
     font-weight: 700;
+  }
+}
+.img {
+  @media (min-width: $medium-screen) and (max-width: 1439px) {
+    width: 125px;
+    height: 45px;
   }
 }
