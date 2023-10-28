@@ -164,3 +164,21 @@ $large-screen: 1440px;
     display: none;
   }
 }
+
+.linkDisabled {
+  color: grey; /* змініть колір тексту на ваш смак, показуємо, що вони неактивні */
+  text-decoration: none; /* видаляємо підкреслення для неактивних посилань */
+  cursor: not-allowed;
+
+  font-weight: 400;
+  line-height: normal;
+  font-size: 25px;
+
+  @media (min-width: $medium-screen) and (max-width: 1439px) {
+    font-size: 22px;
+  }
+  @media (max-width: $small-screen) {
+    font-size: 36px;
+  }
+  /* змінюємо курсор на "не дозволяти" */
+}

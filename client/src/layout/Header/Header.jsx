@@ -43,14 +43,18 @@ const Header = () => {
             <ul className={styles.list}>
               {listItems.map(({ id, href, text }) => (
                 <li className={styles.item} key={id}>
-                  <Link
-                    href={href}
-                    className={`${styles.link}  ${
-                      pathname === href ? styles.active : ""
-                    }`}
-                  >
-                    {t(text)}
-                  </Link>
+                  {id === 3 || id === 2 ? (
+                    <span className={styles.linkDisabled}>{t(text)}</span>
+                  ) : (
+                    <Link
+                      href={href}
+                      className={`${styles.link} ${
+                        pathname === href ? styles.active : ""
+                      }`}
+                    >
+                      {t(text)}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
