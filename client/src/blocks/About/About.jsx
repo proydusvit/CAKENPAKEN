@@ -1,38 +1,22 @@
 import styles from "./About.module.scss";
 import Image from "next/image";
-import Section from "../../components/Section/Section";
+import SectionSecond from "components/Section/SectionSecond";
 import { useTranslation } from "next-i18next";
 
-import Slider from "react-slick"; // Імпортуємо бібліотеку слайдера
+import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import { useMediaQuery } from "@react-hook/media-query";
 import { secondList, listItems } from "./imgList.js";
+import sliderSettings from "components/Slider/SliderSettings";
 
-import foto from "./img/foto.jpg";
+import foto from "@/assets/imgAbout/foto.jpg";
 
 const About = () => {
   const { t } = useTranslation("about");
 
   const isMobile = useMediaQuery("(max-width: 767px)");
-
-  const sliderSettings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
 
   return (
     <div>
@@ -40,14 +24,14 @@ const About = () => {
         <h1> {t("about")}</h1>
       </div>
 
-      <Section className={styles.section}>
+      <SectionSecond className={styles.section}>
         <h2 className={styles.section__caken}> {t("caken")}</h2>
         {isMobile ? (
           <Slider {...sliderSettings} className={styles.slider}>
             {secondList.map(({ img, id, alt }) => (
               <div key={id} className={styles.slide}>
                 <div style={{ display: "flex", justifyContent: "center" }}>
-                  <Image src={img} alt={alt} width={384} height={483} />
+                  <Image src={img} alt={alt} width={344} height={443} />
                 </div>
               </div>
             ))}
@@ -97,8 +81,8 @@ const About = () => {
                     className={styles.slidefoto}
                     src={img}
                     alt={alt}
-                    width={400}
-                    height={400}
+                    width={320}
+                    height={320}
                   />
                 </div>
               </div>
@@ -119,36 +103,7 @@ const About = () => {
             ))}
           </div>
         )}
-        {/* <ul className={styles.list}>
-          <li>
-            <Image
-              className={styles.img}
-              src={foto1}
-              alt="foto1"
-              width={413}
-              height={400}
-            />
-          </li>
-          <li>
-            <Image
-              className={styles.img}
-              src={foto2}
-              alt="foto2"
-              width={413}
-              height={400}
-            />
-          </li>
-          <li>
-            <Image
-              className={styles.img}
-              src={foto3}
-              alt="foto3"
-              width={413}
-              height={400}
-            />
-          </li>
-        </ul> */}
-      </Section>
+      </SectionSecond>
     </div>
   );
 };

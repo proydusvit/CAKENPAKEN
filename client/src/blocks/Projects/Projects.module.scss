@@ -47,7 +47,7 @@ $large-screen: 1440px;
       rgba(0, 0, 0, 0.4),
       rgba(0, 0, 0, 0.4)
     ),
-    url("./img/film.jpg");
+    url("../../assets/imgProjects/film.jpg");
   @include backFoto;
 
   color: #fefefe;
@@ -67,7 +67,7 @@ $large-screen: 1440px;
   }
   @media (max-width: $small-screen) {
     font-size: 36px;
-    height: 400px;
+    height: 300px;
     line-height: 40px;
     letter-spacing: -1.44px;
   }
@@ -77,6 +77,6 @@ $large-screen: 1440px;
         rgba(0, 0, 0, 0.4),
         rgba(0, 0, 0, 0.4)
       ),
-      url("./img/trail.jpg");
+      url("../../assets/imgProjects/trail.jpg");
   }
 }

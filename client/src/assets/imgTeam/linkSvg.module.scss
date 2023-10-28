@@ -1,0 +1,13 @@
+$small-screen: 767px;
+$medium-screen: 768px;
+$large-screen: 1440px;
+.svg {
+  @media (min-width: $medium-screen) and (max-width: 1439px) {
+    width: 30px;
+    height: 30px;
+  }
+  @media (max-width: $small-screen) {
+    width: 30px;
+    height: 30px;
+  }
+}

@@ -1,0 +1,19 @@
+$small-screen: 767px;
+$medium-screen: 768px;
+$large-screen: 1440px;
+
+.list {
+  margin-top: 40px;
+  display: flex;
+
+  @media (max-width: $small-screen) {
+    margin-top: 50px;
+    justify-content: center;
+  }
+  > li {
+    margin-right: 20px;
+    @media (min-width: $medium-screen) and (max-width: 1439px) {
+      margin-right: 10px;
+    }
+  }
+}

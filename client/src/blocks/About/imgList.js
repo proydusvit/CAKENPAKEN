@@ -1,10 +1,11 @@
-import foto2 from "./img/foto2.jpg";
-import foto1 from "./img/foto1.jpg";
-import foto3 from "./img/foto3.jpg";
+import foto2 from "@/assets/imgAbout/foto2.jpg";
+import foto1 from "@/assets/imgAbout/foto1.jpg";
+import foto3 from "@/assets/imgAbout/foto3.jpg";
 
-import main3 from "./img/main3.jpg";
-import main1 from "./img/main1.jpg";
-import main2 from "./img/main2.jpg";
+import main3 from "@/assets/imgAbout/main3.jpg";
+import main1 from "@/assets/imgAbout/main1.jpg";
+import main2 from "@/assets/imgAbout/main2.jpg";
+
 export const listItems = [
   {
     id: 1,

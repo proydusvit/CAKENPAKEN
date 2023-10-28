@@ -1,0 +1,44 @@
+.footer {
+  display: flex;
+  padding: 100px 80px;
+  justify-content: space-between;
+  background: black;
+  align-items: center;
+}
+
+.box {
+  display: flex;
+}
+
+.link {
+  color: white;
+  font-size: 20px;
+  line-height: 24px; /* 120% */
+  letter-spacing: -0.8px;
+  text-transform: capitalize;
+  margin-right: 30px;
+}
+
+.caken {
+  color: white;
+  font-size: 20px;
+  line-height: 24px; /* 120% */
+  letter-spacing: -0.8px;
+  text-transform: capitalize;
+}
+
+.develop {
+  color: white;
+  display: grid;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px; /* 122.222% */
+  letter-spacing: -0.72px;
+  text-decoration-line: underline;
+}
+.develop > a {
+  margin-bottom: 10px;
+}
+.develop > a:last-child {
+  margin-bottom: 0;
+}/*# sourceMappingURL=Footer.module.css.map */

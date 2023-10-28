@@ -1,12 +1,20 @@
 import styles from "./SupportAndDonate.module.scss";
-import { useRouter } from "next/router";
+
 import Link from "next/link";
-import { useTranslation } from "next-i18next";
+import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
+
+import { useTranslation } from "next-i18next";
+
+
+
 const Support = () => {
+
   const { locale, locales, replace, pathname, asPath } = useRouter();
+
   const { t } = useTranslation("common");
   const [currentLanguage, setCurrentLanguage] = useState(locale);
+  
   const [backgroundColor, setBackgroundColor] = useState("black");
   const [color, setColor] = useState("white");
   const [secondColor, setSecondColor] = useState("black");

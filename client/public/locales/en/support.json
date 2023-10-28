@@ -1,12 +1,14 @@
 {
   "title": "support Ukraine in the war against Russia",
   "donation": "donation",
-  "comeback": "Come Back Alive",
+  "circle": "Olympic Circle",
   "text": "Lorem ipsum dolor sit amet consectetur. Nunc rhoncus lectus nisl commodo morbi amet amet. Lacus est quis leo consectetur. Suspendisse id dictumst eu quis mattis risus morbi sed id. ",
   "donate": "Donate",
-  "prytula": "Fund Prytula Foundation",
+  "textFund": "The Olympic Circle Charitable Foundation was officially founded on May 25, 2022. The organization was created by athletes to help the Mykolaiv Oblast in the fight against the Russian invaders. We started our work as volunteers from the first days, and then decided to join forces in the Olympic Circle, because as athletes we understand that only teamwork will be successful.",
   "supportcaken": "Support CakenPaken",
-  "suppotthem": "Support Team",
+  "suppotteam": "Support Team",
   "patreon": "Patreon",
-  "textdonat": "Lorem ipsum dolor sit amet consectetur. Nunc rhoncus lectus nisl commodo morbi amet amet. Lacus est quis leo consectetur. Suspendisse id dictumst eu quis mattis risus morbi sed id. "
+  "textdonat": "Lorem ipsum dolor sit amet consectetur. Nunc rhoncus lectus nisl commodo morbi amet amet. Lacus est quis leo consectetur. Suspendisse id dictumst eu quis mattis risus morbi sed id. ",
+  "textPatreon": "Exclusive content",
+  "textPatreon1": "Basic support"
 }

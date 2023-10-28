@@ -1,5 +1,5 @@
-import Patreon from "./img/patreon.png";
-import QrPatreon from "./img/qrpatreon.jpg";
+import Patreon from "@/assets/imgDonate/patreon.png";
+import QrPatreon from "@/assets/imgDonate/qrpatreon.jpg";
 
 export const listItems = [
   {

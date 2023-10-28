@@ -16,7 +16,7 @@ $large-screen: 1440px;
       rgba(0, 0, 0, 0.4),
       rgba(0, 0, 0, 0.4)
     ),
-    url("../Home/img/Card_Projects.jpg");
+    url("../../assets/imgHome/Card_Projects.jpg");
   @include backFoto;
 
   display: flex;
@@ -180,12 +180,12 @@ $large-screen: 1440px;
 
   &__foto {
     @media (min-width: $medium-screen) and (max-width: 1439px) {
-      width: 100%;
+      width: 630px;
       height: 400px;
       margin-bottom: 80px;
     }
     @media (max-width: $small-screen) {
-      width: 100%;
+      width: 335px;
       height: 276px;
       margin-bottom: 50px;
     }

@@ -1,12 +1,14 @@
 {
   "title": "Підтримка України у війні проти Росії",
   "donation": "Донати",
-  "comeback": "Повернись Живим",
+  "circle": "Олімпійське коло",
   "text": "Lorem ipsum dolor sit amet consectetur. Nunc rhoncus lectus nisl commodo morbi amet amet. Lacus est quis leo consectetur. Suspendisse id dictumst eu quis mattis risus morbi sed id. ",
   "donate": "Задонатити",
-  "prytula": "Благодійний Фонд Сергія Притули",
+  "textFund": "Благодійний фонд «Олімпійське коло» офіційно заснований 25 травня 2022 року. Організація, створена спортсменами для допомоги Миколаєвщині у боротьбі з російськими окупантами. Ми розпочали свою роботу як волонтери з перших днів, а потім вирішили об’єднати зусилля в «Олімпійське коло», тому що ми як спортсмени розуміємо, що тільки командна робота буде успішною.",
   "supportcaken": "підтримай CakenPaken",
   "suppotteam": "Підтримай команду",
   "patreon": "Патреон",
-  "textdonat": "Lorem ipsum dolor sit amet consectetur. Nunc rhoncus lectus nisl commodo morbi amet amet. Lacus est quis leo consectetur. Suspendisse id dictumst eu quis mattis risus morbi sed id. "
+  "textdonat": "Lorem ipsum dolor sit amet consectetur. Nunc rhoncus lectus nisl commodo morbi amet amet. Lacus est quis leo consectetur. Suspendisse id dictumst eu quis mattis risus morbi sed id. ",
+  "textPatreon": "Есклюзивний контент",
+  "textPatreon1": "Базова підтримка"
 }

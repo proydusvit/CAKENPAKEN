@@ -1,55 +1,59 @@
 import { useTranslation } from "next-i18next";
-import styles from "./Film.module.scss";
-import Section from "../../../components/Section/Section";
 
+import styles from "./Film.module.scss";
+
+import SectionSecond from "components/Section/SectionSecond";
+import { listItems } from "./fotoList";
 import Image from "next/image";
 
-import im1 from "../img/Imag.jpg";
-import im2 from "../img/Imag1.jpg";
-import im3 from "../img/Imag2.jpg";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import sliderSettings from "components/Slider/SliderSettings";
+
+import { useMediaQuery } from "@react-hook/media-query";
 
 const Film = () => {
   const { t } = useTranslation("projects");
+
+  const isMobile = useMediaQuery("(max-width: 767px)");
 
   return (
     <div>
       <div className={styles.mainFoto}>
         <h1> {t("film")}</h1>
       </div>
-      <Section>
+      <SectionSecond>
         <div className={styles.conception}>
           <h3 className={styles.conception__name}>{t("conception")}</h3>
           <p className={styles.conception__text}>{t("textF")}</p>
         </div>
-        <ul className={styles.list}>
-          <li>
-            <Image
-              className={styles.img}
-              src={im1}
-              alt="main-foto"
-              width={413}
-              height={400}
-            />
-          </li>
-          <li>
-            <Image
-              className={styles.img}
-              src={im2}
-              alt="main-foto"
-              width={413}
-              height={400}
-            />
-          </li>
-          <li>
-            <Image
-              className={styles.img}
-              src={im3}
-              alt="main-foto"
-              width={413}
-              height={400}
-            />
-          </li>
-        </ul>
+
+        {isMobile ? (
+          <Slider {...sliderSettings} className={styles.slider}>
+            {listItems.map(({ img, id, alt }) => (
+              <div key={id} className={styles.slide}>
+                <div style={{ display: "flex", justifyContent: "center" }}>
+                  <Image src={img} alt={alt} width={330} height={330} />
+                </div>
+              </div>
+            ))}
+          </Slider>
+        ) : (
+          <ul className={styles.list}>
+            {listItems.map(({ id, img, alt }) => (
+              <li key={id}>
+                <Image
+                  className={styles.img}
+                  src={img}
+                  alt={alt}
+                  width={413}
+                  height={400}
+                />
+              </li>
+            ))}
+          </ul>
+        )}
         <h4 className={styles.title}>{t("title")}</h4>
         <div className={styles.video}>
           <iframe
@@ -63,7 +67,7 @@ const Film = () => {
             allowFullScreen
           ></iframe>
         </div>
-      </Section>
+      </SectionSecond>
     </div>
   );
 };

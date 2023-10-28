@@ -4,21 +4,29 @@ $large-screen: 1440px;
 
 .header {
   position: fixed;
+
   width: 336.038px;
   height: 91px;
-  flex-shrink: 0;
+
   box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.25);
+
   margin-left: 80px;
   margin-top: 20px;
+
   display: flex;
   align-items: center;
+
   background-color: white;
   z-index: 100;
+
   @media (min-width: $medium-screen) and (max-width: 1439px) {
     padding: 10px 25px 10px 15px;
+
     font-size: 14px;
+
     height: 64px;
-    width: auto;
+    width: 260px;
+
     margin-right: 10px;
   }
   @media (max-width: $small-screen) {
@@ -26,7 +34,13 @@ $large-screen: 1440px;
     margin: 0;
     background-color: transparent;
     box-shadow: none;
-    width: 100vw;
+    width: 70vw;
+    display: flex;
+    opacity: 1;
+    justify-content: space-between;
+    &[style*="opacity: 1"] {
+      background-color: white;
+    }
   }
 }
 
@@ -51,22 +65,37 @@ $large-screen: 1440px;
 .visible {
   transition: height 0.5s ease-out;
   background: white;
-  height: 390px;
+
+  height: 403px;
   width: 336.038px;
+
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+
   padding: 35px 40px;
   z-index: 5;
   @media (min-width: $medium-screen) and (max-width: 1439px) {
-    width: 233px;
+    width: 260px;
+    height: 372px;
+    padding: 30px 30px;
   }
   @media (max-width: $small-screen) {
     width: 100vw;
+    padding: 55px 22px;
+    height: 650px;
   }
 }
 
 .list {
+  @media (max-width: $small-screen) {
+    margin-top: 50px;
+    margin-left: 15%;
+  }
+
   > li {
     margin-bottom: 15px;
+    @media (max-width: $small-screen) {
+      margin-bottom: 20px;
+    }
   }
 
   > li:last-child {
@@ -76,10 +105,17 @@ $large-screen: 1440px;
 
 .link {
   color: #000;
-  font-style: normal;
+
   font-weight: 400;
   line-height: normal;
   font-size: 25px;
+
+  @media (min-width: $medium-screen) and (max-width: 1439px) {
+    font-size: 22px;
+  }
+  @media (max-width: $small-screen) {
+    font-size: 36px;
+  }
 
   &:hover,
   &.active {
@@ -90,5 +126,41 @@ $large-screen: 1440px;
   @media (min-width: $medium-screen) and (max-width: 1439px) {
     width: 125px;
     height: 45px;
+  }
+}
+.support {
+  height: 48px;
+  width: 185px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+
+  text-align: center;
+  padding: 16px 20px;
+  border-radius: 52px;
+  color: black;
+  background-color: #fff;
+  border: 1px solid black;
+}
+.donate {
+  height: 48px;
+  width: 185px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: #fff;
+  background-color: #000;
+  text-align: center;
+  padding: 16px 25px;
+  border-radius: 52px;
+
+  margin-right: 10px;
+}
+.donate_link {
+  text-align: center;
+  @media (min-width: $medium-screen) {
+    display: none;
   }
 }

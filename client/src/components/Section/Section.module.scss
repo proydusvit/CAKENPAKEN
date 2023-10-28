@@ -5,14 +5,14 @@ $large-screen: 1440px;
 .section {
   width: 1440px;
   margin: 0 auto;
-  padding: 100px 15px 100px;
+  padding: 150px 15px 150px;
   @media (min-width: $medium-screen) and (max-width: 1439px) {
     width: 100vw;
-    padding: 100px 100px;
+    padding: 130px 100px;
   }
 
   @media (max-width: $small-screen) {
     width: 100vw;
-    padding: 50px 22px 100px;
+    padding: 140px 22px 100px;
   }
 }
