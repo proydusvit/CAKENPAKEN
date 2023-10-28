@@ -70,7 +70,7 @@ $large-screen: 1440px;
   }
   @media (max-width: $small-screen) {
     font-size: 14px;
-
+    margin-right: 12px;
     line-height: 18px; /* 128.571% */
     letter-spacing: -0.56px;
     text-transform: capitalize;
