@@ -2,7 +2,7 @@
 
 $small-screen: 767px;
 $medium-screen: 768px;
-$large-screen: 1440px;
+$large-screen: 1239px;
 
 .section {
   display: flex;
@@ -11,7 +11,7 @@ $large-screen: 1440px;
 
   padding: 154px 0 150px;
 
-  @media (min-width: $medium-screen) and (max-width: 1439px) {
+  @media (min-width: $medium-screen) and (max-width: $large-screen) {
     padding: 134px 0 100px;
   }
 
@@ -27,7 +27,7 @@ $large-screen: 1440px;
 
   margin-bottom: 45px;
 
-  @media (min-width: $medium-screen) and (max-width: 1439px) {
+  @media (min-width: $medium-screen) and (max-width: $large-screen) {
     font-size: 28px;
     line-height: 32px; /* 114.286% */
     letter-spacing: -1.12px;
@@ -59,7 +59,7 @@ $large-screen: 1440px;
   justify-content: center;
   align-items: center;
 
-  @media (min-width: $medium-screen) and (max-width: 1439px) {
+  @media (min-width: $medium-screen) and (max-width: $large-screen) {
     font-size: 52px;
     height: 404px;
     line-height: 56px;

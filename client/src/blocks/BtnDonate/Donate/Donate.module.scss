@@ -1,6 +1,6 @@
 $small-screen: 767px;
 $medium-screen: 768px;
-$large-screen: 1440px;
+$large-screen: 1239px;
 
 .title {
   font-size: 50px;
@@ -13,7 +13,7 @@ $large-screen: 1440px;
   display: flex;
   justify-content: center;
 
-  @media (min-width: $medium-screen) and (max-width: 1439px) {
+  @media (min-width: $medium-screen) and (max-width: $large-screen) {
     font-size: 28px;
 
     line-height: 32px;
@@ -38,7 +38,7 @@ $large-screen: 1440px;
   justify-content: space-between;
   margin-bottom: 100px;
 
-  @media (min-width: $medium-screen) and (max-width: 1439px) {
+  @media (min-width: $medium-screen) and (max-width: $large-screen) {
     display: block;
     margin-bottom: 50px;
   }
@@ -54,7 +54,7 @@ $large-screen: 1440px;
     letter-spacing: -1.44px;
     text-transform: uppercase;
 
-    @media (min-width: $medium-screen) and (max-width: 1439px) {
+    @media (min-width: $medium-screen) and (max-width: $large-screen) {
       font-size: 22px;
       line-height: 26px;
       letter-spacing: -0.88px;
@@ -78,7 +78,7 @@ $large-screen: 1440px;
     line-height: 22px;
     letter-spacing: -0.72px;
 
-    @media (min-width: $medium-screen) and (max-width: 1439px) {
+    @media (min-width: $medium-screen) and (max-width: $large-screen) {
       font-size: 14px;
       line-height: 18px;
       width: 553px;
@@ -92,7 +92,7 @@ $large-screen: 1440px;
 }
 
 .fund {
-  @media (min-width: $medium-screen) and (max-width: 1439px) {
+  @media (min-width: $medium-screen) and (max-width: $large-screen) {
     display: flex;
     justify-content: center;
   }
@@ -104,7 +104,7 @@ $large-screen: 1440px;
     justify-content: space-between;
     background-color: #f2f2f2;
 
-    @media (min-width: $medium-screen) and (max-width: 1439px) {
+    @media (min-width: $medium-screen) and (max-width: $large-screen) {
       padding: 25px;
       width: 568px;
     }
@@ -116,7 +116,7 @@ $large-screen: 1440px;
     }
   }
   &_img {
-    @media (min-width: $medium-screen) and (max-width: 1439px) {
+    @media (min-width: $medium-screen) and (max-width: $large-screen) {
       width: 88px;
       height: 85px;
     }
@@ -135,7 +135,7 @@ $large-screen: 1440px;
 
     background-color: #fff;
 
-    @media (min-width: $medium-screen) and (max-width: 1439px) {
+    @media (min-width: $medium-screen) and (max-width: $large-screen) {
       width: 173px;
       height: 173px;
     }
@@ -150,7 +150,7 @@ $large-screen: 1440px;
 .found {
   width: 414px;
 
-  @media (min-width: $medium-screen) and (max-width: 1439px) {
+  @media (min-width: $medium-screen) and (max-width: $large-screen) {
     width: 288px;
   }
   @media (max-width: $small-screen) {
@@ -165,7 +165,7 @@ $large-screen: 1440px;
     text-transform: capitalize;
     margin-bottom: 20px;
 
-    @media (min-width: $medium-screen) and (max-width: 1439px) {
+    @media (min-width: $medium-screen) and (max-width: $large-screen) {
       font-size: 22px;
       line-height: 26px;
       letter-spacing: -0.88px;
@@ -182,7 +182,7 @@ $large-screen: 1440px;
     margin-bottom: 130px;
     list-style-type: circle;
 
-    @media (min-width: $medium-screen) and (max-width: 1439px) {
+    @media (min-width: $medium-screen) and (max-width: $large-screen) {
       margin-bottom: 45px;
     }
     @media (max-width: $small-screen) {
@@ -199,7 +199,7 @@ $large-screen: 1440px;
     margin-bottom: 10px;
     margin-left: 20px;
 
-    @media (min-width: $medium-screen) and (max-width: 1439px) {
+    @media (min-width: $medium-screen) and (max-width: $large-screen) {
       font-size: 14px;
 
       line-height: 18px;
@@ -225,7 +225,7 @@ $large-screen: 1440px;
     color: #ffff;
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
-    @media (min-width: $medium-screen) and (max-width: 1439px) {
+    @media (min-width: $medium-screen) and (max-width: $large-screen) {
       font-size: 12.265px;
 
       line-height: 15.61px;
@@ -242,7 +242,7 @@ $large-screen: 1440px;
   }
 }
 .qr {
-  @media (min-width: $medium-screen) and (max-width: 1439px) {
+  @media (min-width: $medium-screen) and (max-width: $large-screen) {
     display: none;
   }
   @media (max-width: $small-screen) {

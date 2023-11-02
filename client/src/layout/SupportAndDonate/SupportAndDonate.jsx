@@ -6,15 +6,12 @@ import { useState, useEffect } from "react";
 
 import { useTranslation } from "next-i18next";
 
-
-
 const Support = () => {
-
   const { locale, locales, replace, pathname, asPath } = useRouter();
 
   const { t } = useTranslation("common");
   const [currentLanguage, setCurrentLanguage] = useState(locale);
-  
+
   const [backgroundColor, setBackgroundColor] = useState("black");
   const [color, setColor] = useState("white");
   const [secondColor, setSecondColor] = useState("black");
@@ -46,18 +43,18 @@ const Support = () => {
     <div className={styles.box}>
       <div className={styles.support}>
         <Link
-          href="/donate"
-          style={{ backgroundColor: backgroundColor, color: color }}
-          className={styles.support__donate}
-        >
-          {t("donate")}
-        </Link>
-        <Link
           href="/support"
           style={{ color: secondColor, border: `1px solid ${border}` }}
           className={styles.support__ukraine}
         >
           {t("support")}
+        </Link>
+        <Link
+          href="/donate"
+          style={{ backgroundColor: backgroundColor, color: color }}
+          className={styles.support__donate}
+        >
+          {t("donate")}
         </Link>
 
         <button

@@ -16,10 +16,18 @@
     }
   },
   "attributes": {
-    "season": {
+    "name": {
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
+        }
+      },
+      "type": "string"
+    },
+    "category": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
         }
       },
       "type": "string"
@@ -39,30 +47,6 @@
           "localized": false
         }
       }
-    },
-    "name": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string"
-    },
-    "category": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "type": "string"
-    },
-    "title_foto": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "boolean"
     }
   }
 }

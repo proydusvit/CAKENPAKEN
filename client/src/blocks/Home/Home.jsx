@@ -14,6 +14,12 @@ const Home = () => {
   return (
     <section>
       <div className={styles.box}>
+        <Link
+          href="/projects"
+          className={`${styles.content} ${styles.content_img__gallery}`}
+        >
+          {t("projects")}
+        </Link>
         <div className={`${styles.content} ${styles.content_img}`}>
           <div>
             <p> {t("merch")}</p>
@@ -22,14 +28,8 @@ const Home = () => {
           </div>
         </div>
 
-        <Link
-          href="/gallery"
-          className={`${styles.content} ${styles.content_img__gallery}`}
-        >
+        <Link className={styles.projects} href="/gallery">
           {t("gallery")}
-        </Link>
-        <Link className={styles.projects} href="/projects">
-          {t("projects")}
         </Link>
         <Help />
         <Link

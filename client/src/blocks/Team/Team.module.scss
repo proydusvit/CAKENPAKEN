@@ -1,6 +1,6 @@
 $small-screen: 767px;
 $medium-screen: 768px;
-$large-screen: 1440px;
+$large-screen: 1239px;
 
 .title {
   font-size: 50px;
@@ -10,7 +10,7 @@ $large-screen: 1440px;
   text-transform: uppercase;
   // margin-top: 50px;
   margin-bottom: 50px;
-  @media (min-width: $medium-screen) and (max-width: 1439px) {
+  @media (min-width: $medium-screen) and (max-width: $large-screen) {
     font-size: 28px;
     line-height: 32px; /* 114.286% */
     letter-spacing: -1.12px;

@@ -47,8 +47,8 @@ const Film = () => {
                   className={styles.img}
                   src={img}
                   alt={alt}
-                  width={413}
-                  height={400}
+                  width={390}
+                  height={380}
                 />
               </li>
             ))}

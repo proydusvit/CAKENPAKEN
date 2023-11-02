@@ -1,6 +1,6 @@
 $small-screen: 767px;
 $medium-screen: 768px;
-$large-screen: 1440px;
+$large-screen: 1239px;
 
 .donate {
   width: 100%;
@@ -14,7 +14,7 @@ $large-screen: 1440px;
     letter-spacing: -0.96px;
     text-transform: uppercase;
     margin-right: 30px;
-    @media (min-width: $medium-screen) and (max-width: 1439px) {
+    @media (min-width: $medium-screen) and (max-width: $large-screen) {
       font-size: 22px;
       padding: 8px 0;
       font-weight: 400;
@@ -40,7 +40,7 @@ $large-screen: 1440px;
   align-items: center;
 }
 .img {
-  @media (min-width: $medium-screen) and (max-width: 1439px) {
+  @media (min-width: $medium-screen) and (max-width: $large-screen) {
     width: 40px;
     height: 40px;
   }

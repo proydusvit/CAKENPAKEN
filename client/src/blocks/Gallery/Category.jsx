@@ -4,6 +4,7 @@ import styles from "./Category.module.scss";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
+
 const Category = () => {
   const [data, setData] = useState([]);
   const { locale } = useRouter();
@@ -24,10 +25,9 @@ const Category = () => {
   }, [locale]);
 
   return (
-    <section className={styles.section}>
-      <div className={styles.section__title}>
-        <h1 className={styles.title}> {t("gallery")}</h1>
-      </div>
+    <>
+      <h1 className={styles.title}> {t("gallery")}</h1>
+
       <div className={styles.section__link}>
         {data.map((item) => {
           const firstImageData = item.attributes.foto.data[0];
@@ -43,13 +43,11 @@ const Category = () => {
               }}
             >
               <h3 className={styles.name}>{item.attributes.name}</h3>
-
-              <p className={styles.date}>{item.attributes.data}</p>
             </Link>
           );
         })}
       </div>
-    </section>
+    </>
   );
 };
 

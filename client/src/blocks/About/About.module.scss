@@ -3,7 +3,7 @@
 
 $small-screen: 767px;
 $medium-screen: 768px;
-$large-screen: 1440px;
+$large-screen: 1239px;
 
 .mainFoto {
   color: getColor("white-for-text");
@@ -30,7 +30,7 @@ $large-screen: 1440px;
     font-weight: 600;
     line-height: normal;
 
-    @media (min-width: $medium-screen) and (max-width: 1439px) {
+    @media (min-width: $medium-screen) and (max-width: $large-screen) {
       font-size: 52px;
       font-weight: 700;
       line-height: 56px;
@@ -44,7 +44,7 @@ $large-screen: 1440px;
       letter-spacing: -1.44px;
     }
   }
-  @media (min-width: $medium-screen) and (max-width: 1439px) {
+  @media (min-width: $medium-screen) and (max-width: $large-screen) {
     height: 600px;
   }
 
@@ -58,7 +58,7 @@ $large-screen: 1440px;
     justify-content: space-between;
     display: flex;
     margin-bottom: 100px;
-    @media (min-width: $medium-screen) and (max-width: 1439px) {
+    @media (min-width: $medium-screen) and (max-width: $large-screen) {
       margin-left: -100px;
       margin-right: -100px;
     }
@@ -76,7 +76,7 @@ $large-screen: 1440px;
 
     margin: 0 0 100px;
 
-    @media (min-width: $medium-screen) and (max-width: 1439px) {
+    @media (min-width: $medium-screen) and (max-width: $large-screen) {
       text-align: center;
       font-size: 36px;
       line-height: 40px;
@@ -97,7 +97,7 @@ $large-screen: 1440px;
     }
   }
   &__img {
-    @media (min-width: $medium-screen) and (max-width: 1439px) {
+    @media (min-width: $medium-screen) and (max-width: $large-screen) {
       width: 100%;
       height: 356px;
     }
@@ -115,7 +115,7 @@ $large-screen: 1440px;
     letter-spacing: -2px;
     text-transform: uppercase;
 
-    @media (min-width: $medium-screen) and (max-width: 1439px) {
+    @media (min-width: $medium-screen) and (max-width: $large-screen) {
       font-size: 36px;
       line-height: 42px;
       letter-spacing: -1.44px;
@@ -141,7 +141,7 @@ $large-screen: 1440px;
     font-weight: 400;
     line-height: 22px;
     letter-spacing: -0.72px;
-    @media (min-width: $medium-screen) and (max-width: 1439px) {
+    @media (min-width: $medium-screen) and (max-width: $large-screen) {
       font-size: 18px;
 
       width: 100%;
@@ -154,7 +154,7 @@ $large-screen: 1440px;
       height: auto;
     }
   }
-  @media (min-width: $medium-screen) and (max-width: 1439px) {
+  @media (min-width: $medium-screen) and (max-width: $large-screen) {
     display: block;
   }
   @media (max-width: $small-screen) {
@@ -169,7 +169,7 @@ $large-screen: 1440px;
 
   margin-bottom: 100px;
 
-  @media (min-width: $medium-screen) and (max-width: 1439px) {
+  @media (min-width: $medium-screen) and (max-width: $large-screen) {
     display: block;
     margin-bottom: 30px;
   }
@@ -179,14 +179,15 @@ $large-screen: 1440px;
   }
 
   &__foto {
-    @media (min-width: $medium-screen) and (max-width: 1439px) {
-      width: 630px;
+    margin-right: 20px;
+    @media (min-width: $medium-screen) and (max-width: $large-screen) {
+      width: 100%;
       height: 400px;
       margin-bottom: 80px;
     }
     @media (max-width: $small-screen) {
-      width: 335px;
-      height: 276px;
+      width: 274px;
+      height: 227px;
       margin-bottom: 50px;
     }
   }
@@ -196,7 +197,7 @@ $large-screen: 1440px;
     margin-bottom: auto;
     width: 613px;
     height: 296px;
-    @media (min-width: $medium-screen) and (max-width: 1439px) {
+    @media (min-width: $medium-screen) and (max-width: $large-screen) {
       height: auto;
       width: 100%;
     }
@@ -215,7 +216,7 @@ $large-screen: 1440px;
 
     margin-bottom: 50px;
 
-    @media (min-width: $medium-screen) and (max-width: 1439px) {
+    @media (min-width: $medium-screen) and (max-width: $large-screen) {
       font-size: 25px;
       line-height: 32px;
       letter-spacing: -1px;
@@ -249,7 +250,7 @@ $large-screen: 1440px;
     line-height: 22px; /* 122.222% */
     letter-spacing: -0.72px;
 
-    @media (min-width: $medium-screen) and (max-width: 1439px) {
+    @media (min-width: $medium-screen) and (max-width: $large-screen) {
       font-size: 18px;
     }
     @media (max-width: $small-screen) {
@@ -260,7 +261,7 @@ $large-screen: 1440px;
     }
   }
 
-  @media (min-width: $medium-screen) and (max-width: 1439px) {
+  @media (min-width: $medium-screen) and (max-width: $large-screen) {
     width: 100%;
     margin-bottom: 50px;
   }
@@ -274,7 +275,7 @@ $large-screen: 1440px;
   display: flex;
   justify-content: space-between;
 
-  @media (min-width: $medium-screen) and (max-width: 1439px) {
+  @media (min-width: $medium-screen) and (max-width: $large-screen) {
     display: block;
   }
   @media (max-width: $small-screen) {
@@ -287,10 +288,10 @@ $large-screen: 1440px;
     margin-bottom: 20px;
   }
   &__img {
-    @media (min-width: $medium-screen) and (max-width: 1439px) {
+    @media (min-width: $medium-screen) and (max-width: $large-screen) {
       display: block;
-      width: 630px;
-      height: 610px;
+      width: 100%;
+      height: 568px;
     }
   }
 }

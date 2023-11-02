@@ -2,7 +2,7 @@
 @import "../../styles/mixin";
 $small-screen: 767px;
 $medium-screen: 768px;
-$large-screen: 1440px;
+$large-screen: 1239px;
 
 .box {
   display: flex;
@@ -25,7 +25,8 @@ $large-screen: 1440px;
   height: 777px;
   background: getColor("primary");
   @include backFoto;
-  @media (min-width: $medium-screen) and (max-width: 1439px) {
+
+  @media (min-width: $medium-screen) and (max-width: $large-screen) {
     display: flex;
     height: 447px;
     padding: 0;
@@ -58,7 +59,7 @@ $large-screen: 1440px;
     }
     &__gallery {
       background-image: linear-gradient(to bottom, #00000033, #00000033),
-        url("../../assets/imgHome//Card_Gallery.jpg");
+        url("../../assets/imgHome/Card_Projects.jpg");
       @include backFoto;
     }
 
@@ -92,13 +93,13 @@ $large-screen: 1440px;
   width: 100%;
   height: 777px;
   background-image: linear-gradient(to bottom, #00000033, #00000033),
-    url("../../assets/imgHome/Card_Projects.jpg");
+    url("../../assets/imgHome//Card_Gallery.jpg");
   @include backFoto;
   color: #fefefe;
   text-align: center;
   font-size: 100px;
   line-height: normal;
-  @media (min-width: $medium-screen) and (max-width: 1439px) {
+  @media (min-width: $medium-screen) and (max-width: $large-screen) {
     display: flex;
     height: 347px;
     padding: 0;

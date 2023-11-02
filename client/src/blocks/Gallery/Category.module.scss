@@ -7,40 +7,31 @@
   letter-spacing: -4px;
   text-transform: uppercase;
   margin-bottom: 50px;
-}
-.section {
-  padding: 154px 0 0;
-  &__title {
-    display: flex;
-    justify-content: center;
-  }
+
+  display: flex;
+  justify-content: center;
 }
 
 .links {
-  padding: 260px 0 300px;
+  padding: 162px 0;
   text-align: center;
-  height: 720px;
-  width: 50%;
+
+  width: 33.33%;
+
   @include backFoto;
 }
+
 .section__link {
   display: flex;
   flex-wrap: wrap;
+
+  margin-bottom: 50px;
 }
 .name {
   color: #fefefe;
 
-  font-size: 100px;
-
-  line-height: 120px; /* 120% */
-  letter-spacing: -4px;
+  font-size: 49px;
+  line-height: 78px; /* 120% */
+  letter-spacing: -2.6px;
   text-transform: uppercase;
-}
-.date {
-  color: #fefefe;
-  font-size: 50px;
-  font-weight: 400;
-  line-height: 58px; /* 116% */
-  letter-spacing: -2px;
-  text-transform: capitalize;
 }

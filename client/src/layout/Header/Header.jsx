@@ -30,12 +30,12 @@ const Header = () => {
         <ButtonHeader handleClick={handleClick} isClicked={isClicked} />
         <div className={`${styles.content} ${isClicked ? styles.visible : ""}`}>
           <div className={styles.donate_link}>
-            <Link href="/donate" className={styles.donate}>
-              {t("donate")}
-            </Link>
-
             <Link href="/support" className={styles.support}>
               {t("support")}
+            </Link>
+
+            <Link href="/donate" className={styles.donate}>
+              {t("donate")}
             </Link>
           </div>
 

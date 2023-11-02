@@ -1,6 +1,6 @@
 $small-screen: 767px;
 $medium-screen: 768px;
-$large-screen: 1440px;
+$large-screen: 1239px;
 
 .list {
   margin-top: 40px;
@@ -12,7 +12,7 @@ $large-screen: 1440px;
   }
   > li {
     margin-right: 20px;
-    @media (min-width: $medium-screen) and (max-width: 1439px) {
+    @media (min-width: $medium-screen) and (max-width: $large-screen) {
       margin-right: 10px;
     }
   }

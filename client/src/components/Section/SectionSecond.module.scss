@@ -1,12 +1,12 @@
 $small-screen: 767px;
 $medium-screen: 768px;
-$large-screen: 1440px;
+$large-screen: 1239px;
 
 .section {
-  width: 1440px;
+  width: 1240px;
   margin: 0 auto;
-  padding: 150px 15px 150px;
-  @media (min-width: $medium-screen) and (max-width: 1439px) {
+  padding: 150px 15px 200px;
+  @media (min-width: $medium-screen) and (max-width: $large-screen) {
     width: 100vw;
     padding: 100px 100px;
   }

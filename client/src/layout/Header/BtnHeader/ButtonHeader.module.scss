@@ -1,6 +1,6 @@
 $small-screen: 767px;
 $medium-screen: 768px;
-$large-screen: 1440px;
+$large-screen: 1239px;
 
 .nav {
   width: 100%;
@@ -20,7 +20,7 @@ $large-screen: 1440px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  @media (min-width: $medium-screen) and (max-width: 1439px) {
+  @media (min-width: $medium-screen) and (max-width: $large-screen) {
     margin: 0;
     margin-right: 15px;
   }

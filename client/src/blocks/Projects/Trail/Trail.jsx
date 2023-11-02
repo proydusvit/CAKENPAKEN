@@ -39,19 +39,30 @@ const Trail = () => {
             ))}
           </Slider>
         ) : (
-          <ul className={styles.list}>
-            {listItems.map(({ id, img, alt }) => (
-              <li key={id}>
-                <Image
-                  className={styles.img}
-                  src={img}
-                  alt={alt}
-                  width={413}
-                  height={400}
-                />
-              </li>
-            ))}
-          </ul>
+          <div className={styles.parent}>
+            <ul className={styles.list}>
+              {listItems.map(({ id, img, alt, width, height }, index) => (
+                <li
+                  key={id}
+                  className={
+                    index === 0
+                      ? styles.div1
+                      : index === 1
+                      ? styles.div2
+                      : styles.div3
+                  }
+                >
+                  <Image
+                    className={styles.img}
+                    src={img}
+                    alt={alt}
+                    width={width}
+                    height={height}
+                  />
+                </li>
+              ))}
+            </ul>
+          </div>
         )}
 
         <h4 className={styles.title}>{t("titleT")}</h4>

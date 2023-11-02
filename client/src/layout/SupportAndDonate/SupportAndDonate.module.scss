@@ -3,7 +3,7 @@
 
 $small-screen: 767px;
 $medium-screen: 768px;
-$large-screen: 1440px;
+$large-screen: 1239px;
 
 .box {
   display: flex;
@@ -15,7 +15,8 @@ $large-screen: 1440px;
   position: absolute;
   display: flex;
   margin-right: 60px;
-  @media (min-width: $medium-screen) and (max-width: 1439px) {
+
+  @media (min-width: $medium-screen) and (max-width: $large-screen) {
     margin-top: 37px;
     margin-right: 20px;
   }
@@ -34,20 +35,21 @@ $large-screen: 1440px;
     background-color: getColor("primary");
     border-radius: 30px;
 
-    width: 163px;
+    width: 270px;
     padding: 10px 20px;
-    margin-right: 30px;
 
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
-    @media (min-width: $medium-screen) and (max-width: 1439px) {
+
+    @media (min-width: $medium-screen) and (max-width: $large-screen) {
       padding: 5px 0;
       font-size: 14px;
 
-      margin-right: 10px;
+      width: 180px;
     }
+
     @media (max-width: $small-screen) {
       display: none;
     }
@@ -55,19 +57,26 @@ $large-screen: 1440px;
 
   &__ukraine {
     color: getColor("primary");
+
     padding: 10px 30px;
+    margin-right: 30px;
+    width: 172px;
+
+    border-radius: 30px;
     border: 1px solid #000;
     text-align: center;
+
     font-size: 22px;
-    width: 262px;
     line-height: 28px; /* 127.273% */
     letter-spacing: -0.88px;
     text-transform: capitalize;
-    border-radius: 30px;
-    @media (min-width: $medium-screen) and (max-width: 1439px) {
+
+    @media (min-width: $medium-screen) and (max-width: $large-screen) {
       font-size: 14px;
-      width: 100%;
+
+      width: 120px;
       padding: 5px 0;
+      margin-right: 10px;
     }
     @media (max-width: $small-screen) {
       display: none;
@@ -86,7 +95,7 @@ $large-screen: 1440px;
   font-size: 24px;
   font-weight: 600;
   line-height: normal;
-  @media (min-width: $medium-screen) and (max-width: 1439px) {
+  @media (min-width: $medium-screen) and (max-width: $large-screen) {
     font-size: 14px;
     margin-left: 20px;
   }

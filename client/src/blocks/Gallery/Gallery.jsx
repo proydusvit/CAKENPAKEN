@@ -3,6 +3,7 @@ import api from "./services";
 import { useRouter } from "next/router";
 import Foto from "./Foto";
 import Category from "./Category";
+import Section from "components/Section/Section";
 
 const Gallery = () => {
   const [data, setData] = useState([]);
@@ -11,13 +12,14 @@ const Gallery = () => {
   const { locale } = useRouter();
   const router = useRouter();
   const { category } = router.query;
+  const [page, setPage] = useState(1);
 
   useEffect(() => {
     const fetchDataFromApi = async () => {
       try {
-        const fetchedData = await api.fetchGallery({ locale, category });
-        console.log(fetchedData);
-        setData(fetchedData);
+        const fetchedData = await api.fetchGallery({ locale, category, page });
+        setData([...data, ...fetchedData]);
+        setPage(page + 1);
 
         if (category) {
           setSelectedCategory(category);
@@ -29,7 +31,21 @@ const Gallery = () => {
     };
 
     fetchDataFromApi();
-  }, [category, locale]);
+  }, [category, locale, page]);
+
+  const handleScroll = () => {
+    const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+    if (scrollTop + clientHeight >= scrollHeight - 20) {
+      fetchMoreData();
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [data]);
 
   const filteredData = data.filter(
     (item) => item.attributes.category === selectedCategory
@@ -41,10 +57,11 @@ const Gallery = () => {
   }));
 
   return (
-    <>
+    <Section>
       <Category />
       <Foto image={images} />
-    </>
+      {/* {isLoading && <div>Loading...</div>} */}
+    </Section>
   );
 };
 

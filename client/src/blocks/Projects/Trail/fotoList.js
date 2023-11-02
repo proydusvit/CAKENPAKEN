@@ -5,17 +5,23 @@ import trail3 from "@/assets/imgProjects/trail3.jpg";
 export const listItems = [
   {
     id: 1,
-    img: trail1,
+    img: trail2,
     alt: "foto",
+    width: 670,
+    height: 470,
   },
   {
     id: 2,
-    img: trail2,
+    img: trail1,
     alt: "foto2",
+    width: 530,
+    height: 231,
   },
   {
     id: 3,
     img: trail3,
     alt: "foto3",
+    width: 530,
+    height: 233,
   },
 ];

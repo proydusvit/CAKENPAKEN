@@ -44,8 +44,8 @@ const About = () => {
                   className={styles.section__img}
                   src={img}
                   alt={alt}
-                  width={413}
-                  height={553}
+                  width={390}
+                  height={533}
                 />
               </div>
             ))}
@@ -61,8 +61,8 @@ const About = () => {
             className={styles.box__foto}
             src={foto}
             alt="hiking"
-            width={620}
-            height={400}
+            width={590}
+            height={390}
           />
           <div className={styles.box__box}>
             <p className={styles.box__text}>{t("yes")}</p>
@@ -96,7 +96,7 @@ const About = () => {
                   className={styles.list__img}
                   src={img}
                   alt={alt}
-                  width={413}
+                  width={400}
                   height={400}
                 />
               </div>

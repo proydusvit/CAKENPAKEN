@@ -9,7 +9,7 @@ export const listItems = [
     img: Idlo,
     alt: "Idlo",
     href: "https://iidlo.com/",
-    width: 243,
+    width: 233,
     height: 76,
   },
   {
@@ -17,7 +17,7 @@ export const listItems = [
     img: Gorgany,
     alt: "Gorgany",
     href: "https://www.gorgany.com/",
-    width: 303,
+    width: 285,
     height: 81,
   },
   {
@@ -25,7 +25,7 @@ export const listItems = [
     img: Objerky,
     alt: "Objerky",
     href: "https://objerky.com/en",
-    width: 228,
+    width: 218,
     height: 77,
   },
   {
@@ -33,7 +33,7 @@ export const listItems = [
     img: Snow,
     alt: "Snow",
     href: "https://www.snowstuff.com.ua/",
-    width: 274,
+    width: 254,
     height: 65,
   },
 ];

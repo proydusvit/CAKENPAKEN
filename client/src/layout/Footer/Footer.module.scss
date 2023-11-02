@@ -1,12 +1,12 @@
 $small-screen: 767px;
 $medium-screen: 768px;
-$large-screen: 1440px;
+$large-screen: 1239px;
 
 .footer {
-  padding: 50px 15px;
+  padding: 130px 15px;
 
   background: black;
-  @media (min-width: $medium-screen) and (max-width: 1439px) {
+  @media (min-width: $medium-screen) and (max-width: $large-screen) {
     text-align: center;
     padding: 50px 15px;
   }
@@ -18,12 +18,12 @@ $large-screen: 1440px;
   &_box {
     align-items: center;
     display: flex;
-    width: 1440px;
+    width: 1200px;
 
     margin: 0 auto;
     padding: 0 15px 0;
     justify-content: space-between;
-    @media (min-width: $medium-screen) and (max-width: 1439px) {
+    @media (min-width: $medium-screen) and (max-width: $large-screen) {
       display: block;
       align-items: center;
       width: auto;
@@ -44,7 +44,7 @@ $large-screen: 1440px;
 
 .box {
   display: flex;
-  @media (min-width: $medium-screen) and (max-width: 1439px) {
+  @media (min-width: $medium-screen) and (max-width: $large-screen) {
     display: block;
     margin-bottom: 50px;
   }
@@ -62,7 +62,7 @@ $large-screen: 1440px;
   letter-spacing: -0.8px;
   text-transform: capitalize;
   margin-right: 30px;
-  @media (min-width: $medium-screen) and (max-width: 1439px) {
+  @media (min-width: $medium-screen) and (max-width: $large-screen) {
     font-size: 14px;
 
     line-height: 18px; /* 128.571% */
@@ -87,7 +87,7 @@ $large-screen: 1440px;
   line-height: 24px; /* 120% */
   letter-spacing: -0.8px;
   text-transform: capitalize;
-  @media (min-width: $medium-screen) and (max-width: 1439px) {
+  @media (min-width: $medium-screen) and (max-width: $large-screen) {
     margin-bottom: 30px;
   }
 }
@@ -106,7 +106,7 @@ $large-screen: 1440px;
   > a:last-child {
     margin-bottom: 0;
   }
-  @media (min-width: $medium-screen) and (max-width: 1439px) {
+  @media (min-width: $medium-screen) and (max-width: $large-screen) {
     font-size: 12px;
 
     line-height: 14px; /* 116.667% */
