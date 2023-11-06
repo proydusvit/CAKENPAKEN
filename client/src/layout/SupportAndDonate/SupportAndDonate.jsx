@@ -1,5 +1,5 @@
 import styles from "./SupportAndDonate.module.scss";
-
+import { useMediaQuery } from "@react-hook/media-query";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
@@ -15,23 +15,36 @@ const Support = () => {
   const [backgroundColor, setBackgroundColor] = useState("black");
   const [color, setColor] = useState("white");
   const [secondColor, setSecondColor] = useState("black");
-  const [border, setNorder] = useState("black");
+  const [border, setBorder] = useState("black");
 
   useEffect(() => {
-    // Определіть список роутів, на яких потрібно встановити білий фон
-    const whiteBackgroundRoutes = ["/shop", "/projects/film"];
+    const whiteBackgroundRoutes = [
+      "/projects/film",
+      "/projects/trail",
+      "/about",
+    ];
 
-    // Перевірте, чи поточний роут є одним із списку білих фонів
     if (whiteBackgroundRoutes.includes(asPath)) {
       setBackgroundColor("white");
       setColor("black");
       setSecondColor("white");
-      setNorder("white");
+      setBorder("white");
     } else {
       setBackgroundColor("black");
-      setColor("white"); // Встановіть чорний фон за замовчуванням
+      setColor("white");
     }
   }, [asPath]);
+
+  const isMobile = useMediaQuery("(max-width: 767px)");
+
+  const isWhiteLang = [
+    "/projects/film",
+    "/projects/trail",
+    "/about",
+    "/",
+  ].includes(asPath);
+
+  const langColor = isWhiteLang && isMobile ? "white" : "black";
 
   const toggleLanguage = () => {
     const newLanguage = currentLanguage === "en" ? "uk" : "en";
@@ -58,7 +71,7 @@ const Support = () => {
         </Link>
 
         <button
-          style={{ color: secondColor }}
+          style={{ color: langColor }}
           className={styles.lang}
           onClick={toggleLanguage}
         >

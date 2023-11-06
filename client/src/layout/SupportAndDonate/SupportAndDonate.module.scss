@@ -95,6 +95,7 @@ $large-screen: 1239px;
   font-size: 24px;
   font-weight: 600;
   line-height: normal;
+
   @media (min-width: $medium-screen) and (max-width: $large-screen) {
     font-size: 14px;
     margin-left: 20px;

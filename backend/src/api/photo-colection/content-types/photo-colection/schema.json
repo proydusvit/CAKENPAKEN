@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "photo_colections",
+  "info": {
+    "singularName": "photo-colection",
+    "pluralName": "photo-colections",
+    "displayName": "PhotoColection",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "photo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    }
+  }
+}

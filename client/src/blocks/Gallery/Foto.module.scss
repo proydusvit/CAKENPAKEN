@@ -1,5 +1,7 @@
 @import "../../styles//mixin";
-
+$small-screen: 767px;
+$medium-screen: 768px;
+$large-screen: 1239px;
 .foto {
   max-height: 100%;
   min-width: 100%;
@@ -13,10 +15,19 @@
   justify-content: flex-start;
   flex-wrap: wrap;
   gap: 10px;
+  @media (max-width: $small-screen) {
+    gap: 5;
+  }
 }
 .item {
   height: 40vh;
   flex-grow: 1;
+  @media (max-width: $small-screen) {
+    height: auto;
+  }
+  @media (min-width: $medium-screen) and (max-width: $large-screen) {
+    height: 32vh;
+  }
 }
 .item:last-child {
   // There's no science in using "10" here. In all my testing, this delivered the best results.

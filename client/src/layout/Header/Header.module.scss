@@ -82,6 +82,7 @@ $large-screen: 1239px;
     width: 100vw;
     padding: 55px 22px;
     height: 650px;
+    box-shadow: 0;
   }
 }
 
@@ -172,8 +173,8 @@ $large-screen: 1239px;
 }
 
 .linkDisabled {
-  color: grey; /* змініть колір тексту на ваш смак, показуємо, що вони неактивні */
-  text-decoration: none; /* видаляємо підкреслення для неактивних посилань */
+  color: grey;
+  text-decoration: none;
   cursor: not-allowed;
 
   font-weight: 400;
@@ -186,5 +187,4 @@ $large-screen: 1239px;
   @media (max-width: $small-screen) {
     font-size: 36px;
   }
-  /* змінюємо курсор на "не дозволяти" */
 }

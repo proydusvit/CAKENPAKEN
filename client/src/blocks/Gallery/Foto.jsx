@@ -21,12 +21,11 @@ const Foto = ({ image }) => {
         images={image}
       >
         <ul className={styles.list}>
-          {image?.map((item, index, name, width, height) => (
+          {image?.map((item, index) => (
             <li className={styles.item} key={index}>
               <img
-                alt={`Image ${name}`}
-                height={height}
-                width={width}
+                key={item.id}
+                alt={`Image ${item.name}`}
                 className={styles.foto}
                 data-lightboxjs="uniqueLightboxId"
                 quality={80}

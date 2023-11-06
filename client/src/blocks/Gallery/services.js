@@ -1,9 +1,9 @@
 import axios from "axios";
 
-async function fetchGallery({ locale, page }) {
+async function fetchGallery({ locale, pageSize }) {
   try {
     const response = await axios.get(
-      `http://localhost:1337/api/foto-colections?populate=*&locale=${locale}&pagination[page]=${page}`
+      `http://localhost:1337/api/foto-colections?populate=*&locale=${locale}}&pagination[pageSize]=${pageSize}`
     );
     return response.data.data;
   } catch (error) {

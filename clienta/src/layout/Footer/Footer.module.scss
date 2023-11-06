@@ -1,0 +1,115 @@
+$small-screen: 767px;
+$medium-screen: 768px;
+$large-screen: 1440px;
+
+.footer {
+  padding: 50px 15px;
+
+  background: black;
+  @media (min-width: $medium-screen) and (max-width: 1439px) {
+    text-align: center;
+    padding: 50px 15px;
+  }
+  @media (max-width: $small-screen) {
+    text-align: center;
+    padding: 50px 15px;
+  }
+
+  &_box {
+    align-items: center;
+    display: flex;
+    width: 1440px;
+
+    margin: 0 auto;
+    padding: 0 15px 0;
+    justify-content: space-between;
+    @media (min-width: $medium-screen) and (max-width: 1439px) {
+      display: block;
+      align-items: center;
+      width: auto;
+    }
+    @media (max-width: $small-screen) {
+      display: block;
+      align-items: center;
+      width: auto;
+    }
+  }
+  &_img {
+    margin-bottom: 30px;
+    @media (max-width: $small-screen) {
+      margin-bottom: 60px;
+    }
+  }
+}
+
+.box {
+  display: flex;
+  @media (min-width: $medium-screen) and (max-width: 1439px) {
+    display: block;
+    margin-bottom: 50px;
+  }
+  @media (max-width: $small-screen) {
+    display: block;
+    margin-bottom: 100px;
+  }
+}
+
+.link {
+  color: white;
+  font-size: 20px;
+
+  line-height: 24px; /* 120% */
+  letter-spacing: -0.8px;
+  text-transform: capitalize;
+  margin-right: 30px;
+  @media (min-width: $medium-screen) and (max-width: 1439px) {
+    font-size: 14px;
+
+    line-height: 18px; /* 128.571% */
+    letter-spacing: -0.56px;
+  }
+  @media (max-width: $small-screen) {
+    font-size: 14px;
+
+    line-height: 18px; /* 128.571% */
+    letter-spacing: -0.56px;
+    text-transform: capitalize;
+  }
+}
+.link:last-child {
+  margin: 0;
+}
+
+.caken {
+  color: white;
+  font-size: 20px;
+
+  line-height: 24px; /* 120% */
+  letter-spacing: -0.8px;
+  text-transform: capitalize;
+  @media (min-width: $medium-screen) and (max-width: 1439px) {
+    margin-bottom: 30px;
+  }
+}
+.develop {
+  color: white;
+  display: grid;
+  font-size: 18px;
+
+  font-weight: 400;
+  line-height: 22px; /* 122.222% */
+  letter-spacing: -0.72px;
+  text-decoration-line: underline;
+  > a {
+    margin-bottom: 10px;
+  }
+  > a:last-child {
+    margin-bottom: 0;
+  }
+  @media (min-width: $medium-screen) and (max-width: 1439px) {
+    font-size: 12px;
+
+    line-height: 14px; /* 116.667% */
+    letter-spacing: -0.48px;
+  }
+}
