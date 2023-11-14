@@ -5,28 +5,38 @@ import { useMediaQuery } from "@react-hook/media-query";
 
 const ButtonHeader = ({ handleClick, isClicked }) => {
   const { asPath } = useRouter();
-  // const isMobile = useMediaQuery("(max-width: 767px)");
+  const isMobile = useMediaQuery("(max-width: 767px)");
+  const [backgroundColor, setBackgroundColor] = useState("black");
 
-  // const isWhiteBackgroundRoute = [
-  //   "/projects/film",
-  //   "/projects/trail",
-  //   "/about",
-  //   "/",
-  // ].includes(asPath);
+  useEffect(() => {
+    const isWhiteBackgroundRoute = [
+      "/projects/film",
+      "/projects/trail",
+      "/about",
+      "/",
+    ].includes(asPath);
 
-  // const backgroundColor =
-  //   isWhiteBackgroundRoute && isMobile ? "white" : "black";
+    const newBackgroundColor =
+      isWhiteBackgroundRoute && isMobile ? "white" : "black";
 
+    setBackgroundColor(newBackgroundColor);
+  }, [asPath, isMobile]);
   return (
     <div className={styles.nav}>
       <button
         className={`${styles.button} ${isClicked ? styles.clicked : ""}`}
         onClick={handleClick}
       >
-        <span className={styles.line}></span>
-        <span className={styles.line}></span>
         <span
-          // style={{ backgroundColor: backgroundColor }}
+          style={{ backgroundColor: backgroundColor }}
+          className={styles.line}
+        ></span>
+        <span
+          style={{ backgroundColor: backgroundColor }}
+          className={styles.line}
+        ></span>
+        <span
+          style={{ backgroundColor: backgroundColor }}
           className={styles.line}
         ></span>
       </button>

@@ -9,9 +9,9 @@ import styles from "./Foto.module.scss";
 const Foto = ({ image }) => {
   const { t } = useTranslation("gallery");
 
-  useEffect(() => {
-    initLightboxJS("Insert License key", "Insert plan type here");
-  });
+  // useEffect(() => {
+  //   initLightboxJS("Insert License key", "Insert plan type here");
+  // });
 
   return (
     <>
@@ -28,12 +28,12 @@ const Foto = ({ image }) => {
                 <li
                   style={{
                     position: "relative",
-                    backgroundColor: "pink",
+                    backgroundColor: "white",
                   }}
                   className={styles.item}
                   key={item.id}
                 >
-                  <Image
+                  <CldImage
                     alt={`Image ${item.name}`}
                     className={styles.foto}
                     data-lightboxjs="uniqueLightboxId"

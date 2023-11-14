@@ -14,7 +14,7 @@ $large-screen: 1239px;
       rgba(0, 0, 0, 0.4),
       rgba(0, 0, 0, 0.4)
     ),
-    url("../../../assets/imgProjects/trail.jpg");
+    url("../../../assets/imgProjects/trail.webp");
   @include backFoto;
 
   display: flex;
@@ -144,8 +144,7 @@ $large-screen: 1239px;
   }
 
   @media (max-width: $small-screen) {
-    display: block;
-    margin-bottom: 0;
+    display: none;
   }
 }
 .img2 {

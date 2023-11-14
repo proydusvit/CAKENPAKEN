@@ -67,8 +67,3 @@ $large-screen: 1239px;
     height: 70%;
   }
 }
-.slidernone {
-  @media (min-width: $medium-screen) {
-    display: none;
-  }
-}

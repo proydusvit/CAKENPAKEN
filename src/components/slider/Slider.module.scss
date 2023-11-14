@@ -1,0 +1,10 @@
+$small-screen: 767px;
+$medium-screen: 768px;
+$large-screen: 1239px;
+
+.sliderbox {
+  display: none;
+  @media (max-width: $small-screen) {
+    display: block;
+  }
+}

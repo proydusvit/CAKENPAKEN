@@ -22,6 +22,7 @@ const Support = () => {
       "/projects/film",
       "/projects/trail",
       "/about",
+      "/",
     ];
 
     if (whiteBackgroundRoutes.includes(asPath)) {

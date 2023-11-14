@@ -52,7 +52,7 @@ $large-screen: 1239px;
 
   &_img {
     background-image: linear-gradient(to bottom, #00000033, #00000033),
-      url("../../assets/imgHome/Card_Merch.jpg");
+      url("../../assets/imgHome/Card_Merch.webp");
     @include backFoto;
     @media (max-width: $small-screen) {
       width: 100%;
@@ -60,19 +60,19 @@ $large-screen: 1239px;
     }
     &__gallery {
       background-image: linear-gradient(to bottom, #00000033, #00000033),
-        url("../../assets/imgHome/Card_Projects.jpg");
+        url("../../assets/imgHome/Card_Projects.webp");
       @include backFoto;
     }
 
     &__crew {
       background-image: linear-gradient(to bottom, #00000033, #00000033),
-        url("../../assets/imgHome/Card_Crew.jpg");
+        url("../../assets/imgHome/Card_Crew.webp");
       @include backFoto;
     }
 
     &__about {
       background-image: linear-gradient(to bottom, #00000033, #00000033),
-        url("../../assets/imgHome/Card_About.jpg");
+        url("../../assets/imgHome/Card_About.webp");
       @include backFoto;
     }
   }
@@ -94,7 +94,7 @@ $large-screen: 1239px;
   width: 100%;
   height: 777px;
   background-image: linear-gradient(to bottom, #00000033, #00000033),
-    url("../../assets/imgHome//Card_Gallery.jpg");
+    url("../../assets/imgHome//Card_Gallery.webp");
   @include backFoto;
   color: #fefefe;
   text-align: center;

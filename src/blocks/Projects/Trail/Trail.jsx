@@ -4,71 +4,51 @@ import SectionSecond from "../../../components/Section/SectionSecond.jsx";
 
 import Image from "next/image";
 
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import sliderSettings from "components/Slider/SliderSettings";
+import SliderComponent from "components/slider/SliderComponent";
 
-import { useMediaQuery } from "@react-hook/media-query";
-
-import { listItems } from "./fotoList";
+import { listItems, listSlider } from "./fotoList";
 
 const Trail = () => {
   const { t } = useTranslation("projects");
-
-  const isMobile = useMediaQuery("(max-width: 767px)");
 
   return (
     <div>
       <div className={styles.mainFoto}>
         <h1> {t("trail")}</h1>
       </div>
+
       <SectionSecond>
         <div className={styles.conception}>
           <h3 className={styles.conception__name}>{t("conception")}</h3>
           <p className={styles.conception__text}>{t("textT")}</p>
         </div>
-        {isMobile ? (
-          <Slider {...sliderSettings} className={styles.slider}>
-            {listItems.map(({ img, id, alt }) => (
-              <div key={id} className={styles.slide}>
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                  }}
-                >
-                  <Image src={img} alt={alt} width={336} height={200} />
-                </div>
-              </div>
+
+        <SliderComponent list={listSlider} />
+
+        <div className={styles.parent}>
+          <ul className={styles.list}>
+            {listItems.map(({ id, img, alt, width, height }, index) => (
+              <li
+                key={id}
+                className={
+                  index === 0
+                    ? styles.div1
+                    : index === 1
+                    ? styles.div2
+                    : styles.div3
+                }
+              >
+                <Image
+                  className={styles.img}
+                  src={img}
+                  alt={alt}
+                  width={width}
+                  height={height}
+                />
+              </li>
             ))}
-          </Slider>
-        ) : (
-          <div className={styles.parent}>
-            <ul className={styles.list}>
-              {listItems.map(({ id, img, alt, width, height }, index) => (
-                <li
-                  key={id}
-                  className={
-                    index === 0
-                      ? styles.div1
-                      : index === 1
-                      ? styles.div2
-                      : styles.div3
-                  }
-                >
-                  <Image
-                    className={styles.img}
-                    src={img}
-                    alt={alt}
-                    width={width}
-                    height={height}
-                  />
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
+          </ul>
+        </div>
 
         <h4 className={styles.title}>{t("titleT")}</h4>
         <div className={styles.video}>

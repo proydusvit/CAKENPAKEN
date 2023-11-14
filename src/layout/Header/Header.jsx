@@ -17,22 +17,22 @@ import { listItems } from "./linkList";
 const Header = () => {
   const { pathname, asPath } = useRouter();
   const [isClicked, setIsClicked] = useState(false);
-
   const { t } = useTranslation("common");
-
   const [fill, setFill] = useState("black");
-
   const isMobile = useMediaQuery("(max-width: 767px)");
+  const [backgroundColor, setBackgroundColor] = useState("black");
 
-  const isWhiteBackgroundRoute = [
-    "/projects/film",
-    "/projects/trail",
-    "/about",
-    "/",
-  ].includes(asPath);
-
-  const backgroundColor =
-    isWhiteBackgroundRoute && isMobile ? "white" : "black";
+  useEffect(() => {
+    const isWhiteBackgroundRoute = [
+      "/projects/film",
+      "/projects/trail",
+      "/about",
+      "/",
+    ].includes(asPath);
+    const newBackgroundColor =
+      isWhiteBackgroundRoute && isMobile ? "white" : "black";
+    setBackgroundColor(newBackgroundColor);
+  }, [asPath, isMobile]);
 
   const handleClick = () => {
     setIsClicked(!isClicked);

@@ -16,7 +16,7 @@ $large-screen: 1239px;
       rgba(0, 0, 0, 0.4),
       rgba(0, 0, 0, 0.4)
     ),
-    url("../../assets/imgHome/Card_Projects.jpg");
+    url("../../assets/imgAbout/Image_About.webp");
   @include backFoto;
 
   display: flex;
@@ -184,12 +184,12 @@ $large-screen: 1239px;
   &__foto {
     margin-right: 20px;
     @media (min-width: $medium-screen) and (max-width: $large-screen) {
-      width: 100%;
+      width: 600px;
       height: 400px;
       margin-bottom: 80px;
     }
     @media (max-width: $small-screen) {
-      width: 294px;
+      width: 325px;
       height: 227px;
       margin-bottom: 50px;
     }
@@ -293,14 +293,8 @@ $large-screen: 1239px;
   &__img {
     @media (min-width: $medium-screen) and (max-width: $large-screen) {
       display: block;
-      width: 100%;
+      width: 568px;
       height: 568px;
     }
-  }
-}
-.slider {
-  display: none;
-  @media (max-width: $small-screen) {
-    display: block;
   }
 }

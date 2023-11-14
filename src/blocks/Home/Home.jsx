@@ -15,12 +15,16 @@ const Home = () => {
     <section>
       <div className={styles.box}>
         <Link
+          loading="lazy"
           href="/projects"
           className={`${styles.content} ${styles.content_img__gallery}`}
         >
           {t("projects")}
         </Link>
-        <div className={`${styles.content} ${styles.content_img}`}>
+        <div
+          className={`${styles.content} ${styles.content_img}`}
+          loading="lazy"
+        >
           <div>
             <p> {t("merch")}</p>
 
@@ -28,17 +32,19 @@ const Home = () => {
           </div>
         </div>
 
-        <Link className={styles.projects} href="/gallery">
+        <Link className={styles.projects} href="/gallery" loading="lazy">
           {t("gallery")}
         </Link>
         <Help />
         <Link
+          loading="lazy"
           href="/team"
           className={`${styles.content} ${styles.content_img__crew}`}
         >
           {t("crew")}
         </Link>
         <Link
+          loading="lazy"
           href="/about"
           className={`${styles.content} ${styles.content_img__about}`}
         >
