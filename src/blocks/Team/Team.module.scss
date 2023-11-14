@@ -21,7 +21,25 @@ $large-screen: 1239px;
     letter-spacing: -1.44px;
   }
 }
-
+.join {
+  font-size: 50px;
+  text-align: center;
+  line-height: 58px; /* 116% */
+  letter-spacing: -2px;
+  text-transform: uppercase;
+  margin-top: 150px;
+  margin-bottom: 50px;
+  @media (min-width: $medium-screen) and (max-width: $large-screen) {
+    font-size: 28px;
+    line-height: 32px; /* 114.286% */
+    letter-spacing: -1.12px;
+  }
+  @media (max-width: $small-screen) {
+    font-size: 36px;
+    line-height: 40px;
+    letter-spacing: -1.44px;
+  }
+}
 .box {
   @media (min-width: $medium-screen) and (max-width: 1439px) {
     display: flex;
@@ -30,7 +48,7 @@ $large-screen: 1239px;
 .list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  // justify-content: center;
   @media (min-width: $medium-screen) and (max-width: 1439px) {
     margin-left: auto;
     margin-right: auto;

@@ -27,7 +27,7 @@ const SocialMedia = () => {
           </Link>
         </li>
         <li>
-          <Link href="https://www.instagram.com/cakenpaken/">
+          <Link href="https://www.youtube.com/@CAKENPAKEN">
             <Youtube />
           </Link>
         </li>

@@ -22,7 +22,7 @@ const Footer = () => {
             {t("projects")}
           </Link>
           <Link
-            href="https://www.instagram.com/cakenpaken/"
+            href="https://www.youtube.com/@CAKENPAKEN"
             className={styles.link}
           >
             YouTube
@@ -35,12 +35,8 @@ const Footer = () => {
           </Link>
         </div>
         <div className={styles.develop}>
-          <Link href="https://www.instagram.com/cakenpaken/">
-            {t("design")}
-          </Link>
-          <Link href="https://www.instagram.com/cakenpaken/">
-            {t("develop")}
-          </Link>
+          <Link href="https://linktr.ee/tsymbrivskaa">{t("design")}</Link>
+          <Link href="https://linktr.ee/proidysvit7">{t("develop")}</Link>
         </div>
       </div>
     </div>
