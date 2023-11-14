@@ -33,7 +33,7 @@ const Foto = ({ image }) => {
                   className={styles.item}
                   key={item.id}
                 >
-                  <CldImage
+                  <Image
                     alt={`Image ${item.name}`}
                     className={styles.foto}
                     data-lightboxjs="uniqueLightboxId"
