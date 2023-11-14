@@ -1,0 +1,18 @@
+$small-screen: 767px;
+$medium-screen: 768px;
+$large-screen: 1239px;
+
+.section {
+  width: 1240px;
+  margin: 0 auto;
+  padding: 150px 15px 200px;
+  @media (min-width: $medium-screen) and (max-width: $large-screen) {
+    width: 100vw;
+    padding: 100px 100px;
+  }
+
+  @media (max-width: $small-screen) {
+    width: 100vw;
+    padding: 50px 25px 100px;
+  }
+}
