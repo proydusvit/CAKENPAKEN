@@ -14,7 +14,10 @@ const Help = () => {
     <div className={styles.donate}>
       <p>{t("donateU")}</p>
       <div>
-        <Link href="https://savelife.in.ua/" className={styles.donate__fond}>
+        <Link
+          href="https://olympiccircle.org.ua/pro-nas/rekvizyty.html"
+          className={styles.donate__fond}
+        >
           <Image
             className={styles.img}
             src={Logo}
