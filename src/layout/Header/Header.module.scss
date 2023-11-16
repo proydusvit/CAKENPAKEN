@@ -1,7 +1,14 @@
 $small-screen: 767px;
 $medium-screen: 768px;
 $large-screen: 1239px;
-
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 .header {
   position: fixed;
 
@@ -55,6 +62,7 @@ $large-screen: 1239px;
   z-index: -1;
   overflow: hidden;
   padding: 0 40px;
+
   @media (min-width: $medium-screen) and (max-width: $large-screen) {
     margin-left: -15px;
     margin-top: 20px;
@@ -87,6 +95,7 @@ $large-screen: 1239px;
 }
 
 .list {
+  animation: 1s ease-out 0s 1 slideInFromLeft;
   @media (max-width: $small-screen) {
     margin-top: 50px;
     margin-left: 15%;
@@ -124,12 +133,22 @@ $large-screen: 1239px;
   }
 }
 .img {
+  animation: shrinkText 2s linear forwards;
   @media (min-width: $medium-screen) and (max-width: $large-screen) {
     width: 125px;
     height: 45px;
   }
 }
-
+// @keyframes shrinkText {
+//   from {
+//     width: 1475px;
+//     height: 485px; /* Початковий розмір тексту */
+//   }
+//   to {
+//     width: 175px;
+//     height: 65px;
+//   }
+// }
 .support {
   font-size: 14px;
   line-height: normal;

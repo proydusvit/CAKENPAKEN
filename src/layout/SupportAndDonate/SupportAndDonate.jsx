@@ -21,6 +21,8 @@ const Support = () => {
     const whiteBackgroundRoutes = [
       "/projects/film",
       "/projects/trail",
+      "/gallery/film",
+      "/gallery/trail",
       "/about",
       "/",
     ];

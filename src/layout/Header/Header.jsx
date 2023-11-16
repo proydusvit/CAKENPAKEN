@@ -26,6 +26,8 @@ const Header = () => {
     const isWhiteBackgroundRoute = [
       "/projects/film",
       "/projects/trail",
+      "/gallery/film",
+      "/gallery/trail",
       "/about",
       "/",
     ].includes(asPath);
@@ -78,13 +80,6 @@ const Header = () => {
       </div>
       <div>
         <Link href="/">
-          {/* <Image
-            className={styles.img}
-            src={Logo}
-            alt="Logo"
-            width={175}
-            height={65}
-          /> */}
           <svg
             className={styles.img}
             width="175"

@@ -12,6 +12,8 @@ const ButtonHeader = ({ handleClick, isClicked }) => {
     const isWhiteBackgroundRoute = [
       "/projects/film",
       "/projects/trail",
+      "/gallery/film",
+      "/gallery/trail",
       "/about",
       "/",
     ].includes(asPath);

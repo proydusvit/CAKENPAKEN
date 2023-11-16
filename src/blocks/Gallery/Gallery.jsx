@@ -3,7 +3,6 @@ import api from "./services";
 import { useRouter } from "next/router";
 import Foto from "./Foto";
 import Category from "./Category";
-import Section from "components/Section/Section";
 
 const Gallery = () => {
   const [data, setData] = useState([]);
@@ -50,11 +49,11 @@ const Gallery = () => {
     .sort((a, b) => a.id - b.id);
 
   return (
-    <Section>
+    <>
       <Category />
 
-      <Foto image={images} />
-    </Section>
+      {/* <Foto image={images} /> */}
+    </>
   );
 };
 export default Gallery;

@@ -8,8 +8,6 @@ import Image from "next/image";
 
 import SliderComponent from "components/slider/SliderComponent";
 
-import { useMediaQuery } from "@react-hook/media-query";
-
 const Film = () => {
   const { t } = useTranslation("projects");
 

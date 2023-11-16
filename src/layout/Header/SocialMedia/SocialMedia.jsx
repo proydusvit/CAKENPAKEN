@@ -12,18 +12,18 @@ const SocialMedia = () => {
     <div>
       <ul className={styles.list}>
         <li>
-          <Link href="https://www.instagram.com/cakenpaken/">
-            <Inst />
+          <Link href="mailto:pakencaken@gmail.com">
+            <Gmail />
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link href="https://www.instagram.com/cakenpaken/">
             <Phone />
           </Link>
-        </li>
+        </li> */}
         <li>
           <Link href="https://www.instagram.com/cakenpaken/">
-            <Gmail />
+            <Inst />
           </Link>
         </li>
         <li>

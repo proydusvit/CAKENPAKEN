@@ -1,5 +1,5 @@
-import Layout from "../layout/Layout";
-import PhotoGallery from "../blocks/Gallery/Gallery";
+import Layout from "../../layout/Layout";
+import PhotoGallery from "../../blocks/Gallery/Gallery";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export const getStaticProps = async ({ locale }) => {

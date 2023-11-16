@@ -17,7 +17,7 @@ export const listTeam = [
     id: 1,
     img: chicha,
     name: "Chycha",
-    social: "https://www.youtube.com/@CAKENPAKEN",
+    social: "https://linktr.ee/oleksacaken",
   },
   {
     id: 2,

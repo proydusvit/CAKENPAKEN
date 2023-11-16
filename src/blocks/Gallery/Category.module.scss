@@ -2,7 +2,20 @@
 $small-screen: 767px;
 $medium-screen: 768px;
 $large-screen: 1239px;
+.section {
+  width: 1240px;
+  margin: 0 auto;
+  padding: 150px 15px 200px;
+  @media (min-width: $medium-screen) and (max-width: $large-screen) {
+    width: 100vw;
+    padding: 130px 100px;
+  }
 
+  @media (max-width: $small-screen) {
+    width: 100vw;
+    padding: 140px 0 100px;
+  }
+}
 .title {
   font-size: 100px;
 
@@ -29,20 +42,21 @@ $large-screen: 1239px;
 }
 
 .links {
-  height: 403px;
+  height: 605px;
   text-align: center;
 
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 33.33%;
+  width: 50%;
   @media (min-width: $medium-screen) and (max-width: $large-screen) {
-    padding: 95px 0;
-    height: 0;
+    height: 285px;
+    width: 285px;
   }
   @media (max-width: $small-screen) {
-    padding: 55px 0;
-    height: 0;
+    padding: 0 -22px;
+    width: 100%;
+    height: 305px;
   }
 
   @include backFoto;
@@ -51,29 +65,30 @@ $large-screen: 1239px;
 .section__link {
   display: flex;
   flex-wrap: wrap;
-
+  justify-content: center;
   margin-bottom: 50px;
 }
 .name {
   color: #fefefe;
+  font-size: 70px;
 
-  font-size: 50px;
+  line-height: 80px;
+  letter-spacing: -3px;
+  text-transform: uppercase;
   text-align: center;
 
-  line-height: 78px; /* 120% */
-  letter-spacing: -2.6px;
-  text-transform: uppercase;
-
   @media (min-width: $medium-screen) and (max-width: $large-screen) {
-    font-size: 15.525px;
+    font-size: 23.625px;
 
-    line-height: 17.25px;
-    letter-spacing: -0.621px;
+    line-height: 26.25px;
+    letter-spacing: -0.945px;
   }
   @media (max-width: $small-screen) {
-    font-size: 10.8px;
-
-    line-height: 12px;
-    letter-spacing: -0.432px;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px; /* 111.111% */
+    letter-spacing: -1.44px;
+    text-transform: uppercase;
   }
 }

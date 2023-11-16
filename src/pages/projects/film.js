@@ -12,7 +12,10 @@ export const getStaticProps = async ({ locale }) => {
 };
 const Film = () => {
   return (
-    <Layout title="Film">
+    <Layout
+      title="Mountain
+    Instant"
+    >
       <Movie />
     </Layout>
   );

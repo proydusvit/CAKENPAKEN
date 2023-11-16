@@ -8,46 +8,40 @@ import styles from "./Foto.module.scss";
 
 const Foto = ({ image }) => {
   const { t } = useTranslation("gallery");
-
-  // useEffect(() => {
-  //   initLightboxJS("Insert License key", "Insert plan type here");
-  // });
-
+  const sortedImages = image.slice().sort((a, b) => a.id - b.id);
   return (
     <>
       <SlideshowLightbox
         lightboxIdentifier="uniqueLightboxId"
         framework="next"
-        images={image}
+        images={image.map((item) => ({
+          src: item.img, // Ensure that item.img is a valid image URL
+          alt: "Film",
+        }))}
       >
         <ul className={styles.list}>
-          {image?.map(
-            (item) => (
-              console.log(item.src),
-              (
-                <li
-                  style={{
-                    position: "relative",
-                    backgroundColor: "white",
-                  }}
-                  className={styles.item}
-                  key={item.id}
-                >
-                  <Image
-                    alt={`Image ${item.name}`}
-                    className={styles.foto}
-                    data-lightboxjs="uniqueLightboxId"
-                    quality={80}
-                    fill={true}
-                    src={item.src}
-                    style={{
-                      backgroundPosition: " 50% 50%", // cover, contain, none
-                    }}
-                  />
-                </li>
-              )
-            )
-          )}
+          {sortedImages.map((item) => (
+            <li
+              style={{
+                position: "relative",
+                backgroundColor: "white",
+              }}
+              className={styles.item}
+              key={item.id}
+            >
+              <Image
+                alt="Film"
+                className={styles.foto}
+                data-lightboxjs="uniqueLightboxId"
+                quality={80}
+                fill={true}
+                src={item.img}
+                style={{
+                  backgroundPosition: " 50% 50%", // cover, contain, none
+                }}
+              />
+            </li>
+          ))}
         </ul>
       </SlideshowLightbox>
     </>
