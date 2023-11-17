@@ -1,0 +1,10 @@
+$small-screen: 767px;
+$medium-screen: 768px;
+$large-screen: 1239px;
+
+.img {
+  @media (max-width: $small-screen) {
+    width: 300px;
+    height: 150px;
+  }
+}

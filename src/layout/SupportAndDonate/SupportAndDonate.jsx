@@ -3,15 +3,12 @@ import { useMediaQuery } from "@react-hook/media-query";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
-
 import { useTranslation } from "next-i18next";
 
 const Support = () => {
   const { locale, locales, replace, pathname, asPath } = useRouter();
-
   const { t } = useTranslation("common");
   const [currentLanguage, setCurrentLanguage] = useState(locale);
-
   const [backgroundColor, setBackgroundColor] = useState("black");
   const [color, setColor] = useState("white");
   const [secondColor, setSecondColor] = useState("black");
@@ -38,16 +35,6 @@ const Support = () => {
     }
   }, [asPath]);
 
-  // const isMobile = useMediaQuery("(max-width: 767px)");
-
-  // const isWhiteLang = [
-  //   "/projects/film",
-  //   "/projects/trail",
-  //   "/about",
-  //   "/",
-  // ].includes(asPath);
-
-  // const langColor = isWhiteLang && isMobile ? "white" : "black";
 
   const toggleLanguage = () => {
     const newLanguage = currentLanguage === "en" ? "uk" : "en";
@@ -57,6 +44,7 @@ const Support = () => {
 
   return (
     <div className={styles.box}>
+      
       <div className={styles.support}>
         <Link
           href="/support"

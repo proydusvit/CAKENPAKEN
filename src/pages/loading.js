@@ -1,7 +1,11 @@
-import React from "react";
+import { Load } from "components/Loading/Loading.jsx";
 
 const Loading = () => {
-  return <div>loading.....</div>;
+  return (
+    <div>
+      <Load />
+    </div>
+  );
 };
 
 export default Loading;

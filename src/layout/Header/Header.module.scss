@@ -1,6 +1,7 @@
 $small-screen: 767px;
 $medium-screen: 768px;
 $large-screen: 1239px;
+
 @keyframes slideInFromLeft {
   0% {
     transform: translateX(-100%);
@@ -9,6 +10,7 @@ $large-screen: 1239px;
     transform: translateX(0);
   }
 }
+
 .header {
   position: fixed;
 
@@ -131,6 +133,9 @@ $large-screen: 1239px;
   &.active {
     font-weight: 700;
   }
+  &:focus {
+    font-weight: 700;
+  }
 }
 .img {
   animation: shrinkText 2s linear forwards;
@@ -139,16 +144,7 @@ $large-screen: 1239px;
     height: 45px;
   }
 }
-// @keyframes shrinkText {
-//   from {
-//     width: 1475px;
-//     height: 485px; /* Початковий розмір тексту */
-//   }
-//   to {
-//     width: 175px;
-//     height: 65px;
-//   }
-// }
+
 .support {
   font-size: 14px;
   line-height: normal;

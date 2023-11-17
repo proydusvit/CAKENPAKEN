@@ -5,7 +5,7 @@ import SectionSecond from "../../../components/Section/SectionSecond.jsx";
 import Image from "next/image";
 
 import SliderComponent from "components/slider/SliderComponent";
-
+import { BackLink } from "components/BackLink/BackLink";
 import { listItems, listSlider } from "./fotoList";
 
 const Trail = () => {
@@ -18,6 +18,12 @@ const Trail = () => {
       </div>
 
       <SectionSecond>
+        <BackLink
+          link={"/projects"}
+          back={t("projects")}
+          current={t("trail")}
+        />
+
         <div className={styles.conception}>
           <h3 className={styles.conception__name}>{t("conception")}</h3>
           <p className={styles.conception__text}>{t("textT")}</p>

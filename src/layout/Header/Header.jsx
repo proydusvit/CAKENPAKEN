@@ -44,6 +44,7 @@ const Header = () => {
     <header className={styles.header}>
       <div className={styles.container}>
         <ButtonHeader handleClick={handleClick} isClicked={isClicked} />
+
         <div className={`${styles.content} ${isClicked ? styles.visible : ""}`}>
           <div className={styles.donate_link}>
             <Link href="/support" className={styles.support}>
@@ -75,6 +76,7 @@ const Header = () => {
               ))}
             </ul>
           </nav>
+
           <SocialMedia />
         </div>
       </div>

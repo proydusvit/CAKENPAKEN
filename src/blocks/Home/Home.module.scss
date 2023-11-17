@@ -99,6 +99,15 @@ $large-screen: 1239px;
 .soon {
   margin-left: 215px;
   margin-top: -80px;
+
+  @media (min-width: $medium-screen) and (max-width: $large-screen) {
+    margin-left: 175px;
+    margin-top: -22px;
+  }
+  @media (max-width: $small-screen) {
+    margin-left: 215px;
+    margin-top: -27px;
+  }
 }
 
 .projects {
@@ -144,29 +153,4 @@ $large-screen: 1239px;
     letter-spacing: -2px;
     text-transform: uppercase;
   }
-}
-.animation {
-  background-color: #fefefe;
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  opacity: 1;
-  z-index: 1111;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: fadeOutText 3s linear forwards;
-}
-@keyframes fadeOutText {
-  from {
-    opacity: 1; /* Початкова прозорість тексту */
-  }
-  to {
-    z-index: -1;
-    opacity: 0; /* Кінцева прозорість тексту */
-  }
-}
-.zzz {
-  text-align: center;
 }

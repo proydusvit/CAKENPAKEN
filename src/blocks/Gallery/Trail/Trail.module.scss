@@ -15,7 +15,7 @@ $large-screen: 1239px;
       rgba(0, 0, 0, 0.4),
       rgba(0, 0, 0, 0.4)
     ),
-    url("../../../assets/imgGallery/Trail/main.webp");
+    url("../../../assets/imgGallery/Trail/img2.webp");
   @include backFoto;
 
   display: flex;
@@ -53,28 +53,4 @@ $large-screen: 1239px;
   @media (max-width: $small-screen) {
     height: 399.722px;
   }
-}
-.goBackBox {
-  margin-bottom: 50px;
-}
-.goBack {
-  cursor: pointer;
-  font-size: 18px;
-  color: #8f8f8f;
-  font-weight: 400;
-  line-height: normal;
-  border: none;
-  background-color: transparent;
-  margin-right: 10px;
-}
-.goBack:focus {
-  outline: none;
-}
-.goBackName {
-  text-transform: uppercase;
-  color: #8f8f8f;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
 }

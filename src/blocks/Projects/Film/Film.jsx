@@ -5,7 +5,7 @@ import styles from "./Film.module.scss";
 import SectionSecond from "components/Section/SectionSecond";
 import { listItems } from "./fotoList";
 import Image from "next/image";
-
+import { BackLink } from "components/BackLink/BackLink";
 import SliderComponent from "components/slider/SliderComponent";
 
 const Film = () => {
@@ -17,6 +17,7 @@ const Film = () => {
         <h1> {t("film")}</h1>
       </div>
       <SectionSecond>
+        <BackLink link={"/projects"} back={t("projects")} current={t("film")} />
         <div className={styles.conception}>
           <h3 className={styles.conception__name}>{t("conception")}</h3>
           <p className={styles.conception__text}>{t("textF")}</p>

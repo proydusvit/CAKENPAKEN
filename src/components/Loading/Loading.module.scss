@@ -1,0 +1,25 @@
+.animation {
+  background-color: #fefefe;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  opacity: 1;
+  z-index: 1111;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeOutText 3s linear forwards;
+}
+@keyframes fadeOutText {
+  from {
+    opacity: 1; /* Початкова прозорість тексту */
+  }
+  to {
+    z-index: -1;
+    opacity: 0; /* Кінцева прозорість тексту */
+  }
+}
+.zzz {
+  text-align: center;
+}

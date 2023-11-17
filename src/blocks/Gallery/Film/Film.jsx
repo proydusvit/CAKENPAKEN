@@ -4,7 +4,7 @@ import styles from "./Film.module.scss";
 
 import Foto from "../Foto";
 import { listFilm } from "./list";
-import Link from "next/link";
+import { BackLink } from "components/BackLink/BackLink";
 
 export const GalleryFilm = () => {
   const { t } = useTranslation("gallery");
@@ -16,12 +16,8 @@ export const GalleryFilm = () => {
       </div>
 
       <SectionSecond>
-        <div className={styles.goBackBox}>
-          <Link className={styles.goBack} href={"/gallery"}>
-            {t("gallery")} /
-          </Link>
-          <span className={styles.goBackName}>{t("film")}</span>{" "}
-        </div>
+        <BackLink link={"/gallery"} back={t("gallery")} current={t("film")} />
+
         <Foto image={listFilm} />
       </SectionSecond>
     </>

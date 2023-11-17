@@ -1,0 +1,30 @@
+$small-screen: 767px;
+$medium-screen: 768px;
+$large-screen: 1239px;
+
+.goBackBox {
+  margin-bottom: 100px;
+  @media (max-width: $small-screen) {
+    margin-bottom: 50px;
+  }
+}
+.goBack {
+  cursor: pointer;
+  font-size: 18px;
+  color: #8f8f8f;
+  font-weight: 400;
+  line-height: normal;
+  border: none;
+  background-color: transparent;
+  margin-right: 10px;
+}
+.goBack:focus {
+  outline: none;
+}
+.goBackName {
+  text-transform: uppercase;
+  color: black;
+  font-size: 18px;
+
+  line-height: normal;
+}

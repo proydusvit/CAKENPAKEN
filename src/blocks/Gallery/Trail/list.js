@@ -4,6 +4,9 @@ import img3 from "../../../assets/imgGallery/Trail/img3.webp";
 import img4 from "../../../assets/imgGallery/Trail/img4.webp";
 import img5 from "../../../assets/imgGallery/Trail/img5.webp";
 import img6 from "../../../assets/imgGallery/Trail/img6.webp";
+import img7 from "../../../assets/imgGallery/Trail/img7.webp";
+import img8 from "../../../assets/imgGallery/Trail/img8.webp";
+import img9 from "../../../assets/imgGallery/Trail/img9.webp";
 export const listTrail = [
   {
     id: 1,
@@ -27,6 +30,18 @@ export const listTrail = [
   },
   {
     id: 6,
+    img: img8,
+  },
+  {
+    id: 7,
+    img: img7,
+  },
+  {
+    id: 8,
     img: img6,
+  },
+  {
+    id: 9,
+    img: img9,
   },
 ];

@@ -1,21 +1,11 @@
-import Image from "next/image";
+import { Problem } from "components/Fail/problem";
+import fail from "../../public/404.png";
 import Layout from "layout/Layout";
-import Fail from "../../public/404.png";
-import Section from "components/Section/Section";
+
 const NotFound = () => {
   return (
     <Layout>
-      <Section>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            margin: "50px 0",
-          }}
-        >
-          <Image src={Fail} width={600} height={300} />
-        </div>
-      </Section>
+      <Problem imge={fail} />
     </Layout>
   );
 };

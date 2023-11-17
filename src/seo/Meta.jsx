@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-const getTitle = (title) => `CAKENPAKEN | ${title}`;
+const getTitle = (title) => ` ${title}`;
 
 const Meta = ({ title, description, children }) => {
   return (

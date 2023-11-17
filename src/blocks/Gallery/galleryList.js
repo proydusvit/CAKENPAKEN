@@ -10,7 +10,7 @@ export const listCategory = [
   },
   {
     id: 2,
-    img: "https://res.cloudinary.com/dzrjsjo7z/image/upload/f_auto,q_auto/ql2kcsf2cteym1uaczel",
+    img: "https://res.cloudinary.com/dg6fnnbpd/image/upload/f_auto,q_auto/fc8sd0yxo3rki1vhsrfn",
     name: "trail",
     link: "gallery/trail",
   },

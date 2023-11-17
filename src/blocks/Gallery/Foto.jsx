@@ -14,7 +14,7 @@ const Foto = ({ image }) => {
       <SlideshowLightbox
         lightboxIdentifier="uniqueLightboxId"
         framework="next"
-        images={image.map((item) => ({
+        images={sortedImages.map((item) => ({
           src: item.img, // Ensure that item.img is a valid image URL
           alt: "Film",
         }))}
@@ -34,10 +34,11 @@ const Foto = ({ image }) => {
                 className={styles.foto}
                 data-lightboxjs="uniqueLightboxId"
                 quality={80}
-                fill={true}
+                fill
                 src={item.img}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 70vw"
                 style={{
-                  backgroundPosition: " 50% 50%", // cover, contain, none
+                  backgroundPosition: " 50% 50%",
                 }}
               />
             </li>

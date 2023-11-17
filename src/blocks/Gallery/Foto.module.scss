@@ -13,6 +13,9 @@ $large-screen: 1239px;
 .foto:hover {
   transform: scale(1.1);
 }
+.foto:focus {
+  transform: scale(1.1);
+}
 .list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
