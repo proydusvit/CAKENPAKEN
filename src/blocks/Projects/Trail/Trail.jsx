@@ -7,10 +7,11 @@ import Image from "next/image";
 import SliderComponent from "components/slider/SliderComponent";
 import { BackLink } from "components/BackLink/BackLink";
 import { listItems, listSlider } from "./fotoList";
+import VideoPlayer from "components/Video/Videoplayer";
 
 const Trail = () => {
   const { t } = useTranslation("projects");
-
+  const youtubeVideoId = "rTUaPPWdUgM?si=lEHMBiT71USE5uuS";
   return (
     <div>
       <div className={styles.mainFoto}>
@@ -57,18 +58,7 @@ const Trail = () => {
         </div>
 
         <h4 className={styles.title}>{t("titleT")}</h4>
-        <div className={styles.video}>
-          <iframe
-            className={styles.frame}
-            width="1065"
-            height="550"
-            src="https://www.youtube.com/embed/rTUaPPWdUgM?si=lEHMBiT71USE5uuS"
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            frameBorder={0}
-            allowFullScreen
-          ></iframe>
-        </div>
+        <VideoPlayer videoId={youtubeVideoId} />
       </SectionSecond>
     </div>
   );

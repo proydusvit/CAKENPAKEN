@@ -1,5 +1,4 @@
 import { useTranslation } from "next-i18next";
-
 import styles from "./Film.module.scss";
 
 import SectionSecond from "components/Section/SectionSecond";
@@ -7,10 +6,11 @@ import { listItems } from "./fotoList";
 import Image from "next/image";
 import { BackLink } from "components/BackLink/BackLink";
 import SliderComponent from "components/slider/SliderComponent";
+import VideoPlayer from "components/Video/Videoplayer";
 
 const Film = () => {
   const { t } = useTranslation("projects");
-
+  const youtubeVideoId = "ElKO3_Ovxgw?si=4i7EY7ezUIERFOHK";
   return (
     <div>
       <div className={styles.mainFoto}>
@@ -40,18 +40,7 @@ const Film = () => {
         </ul>
 
         <h4 className={styles.title}>{t("title")}</h4>
-        <div className={styles.video}>
-          <iframe
-            className={styles.frame}
-            width="1065"
-            height="550"
-            src="https://www.youtube.com/embed/rTUaPPWdUgM?si=lEHMBiT71USE5uuS"
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            frameBorder={0}
-            allowFullScreen
-          ></iframe>
-        </div>
+        <VideoPlayer videoId={youtubeVideoId} />
       </SectionSecond>
     </div>
   );
