@@ -1,0 +1,58 @@
+@import "../../styles//color";
+
+.section {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 150px;
+}
+
+.box {
+    margin-right: 110px;
+
+    >h3 {
+        width: 548px;
+        flex-direction: column;
+        justify-content: center;
+        color: getColor('primary');
+        font-size: 46px;
+
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+    }
+
+    >a {
+        color: getColor('white-for-text');
+        font-size: 24px;
+
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        border-radius: 10px;
+        background: #000;
+        padding: 20px 140px;
+    }
+}
+
+.contact {
+
+    >a {
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+
+        >p {
+            margin-left: 20px;
+            color: getColor('primary');
+
+            font-size: 22px;
+
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+
+}
