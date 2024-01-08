@@ -5,6 +5,7 @@ export default function robots() {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://acme.com/sitemap.xml',
+    sitemap:
+      'https://cakenpaken-6n28-git-main-proydusvit.vercel.app//sitemap.xml',
   };
 }
