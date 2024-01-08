@@ -1,22 +1,22 @@
-import style from "./Donate.module.scss";
-import { useTranslation } from "next-i18next";
-import Link from "next/link";
-import Image from "next/image";
-import { listItems } from "./List.js";
-import Section from "components/Section/Section";
+import style from './Donate.module.scss';
+import { useTranslation } from 'next-i18next';
+import Link from 'next/link';
+import Image from 'next/image';
+import { listItems } from './List.js';
+import Section from 'components/Section/Section';
 const DonateCaken = () => {
-  const { t } = useTranslation("support");
+  const { t } = useTranslation('support');
 
   return (
     <Section>
-      <h1 className={style.title}>{t("supportcaken")}</h1>
+      <h1 className={style.title}>{t('supportcaken')}</h1>
       <div className={style.donate}>
-        <h2 className={style.donate_title}>{t("donation")}</h2>
-        <p className={style.donate_text}>{t("textdonat")}</p>
+        <h2 className={style.donate_title}>{t('donation')}</h2>
+        <p className={style.donate_text}>{t('textdonat')}</p>
       </div>
 
       <ul className={style.fund}>
-        {listItems.map((item) => (
+        {listItems.map(item => (
           <li key={item.id} className={style.fund_item}>
             <div className={style.fund_box}>
               <Image
@@ -30,11 +30,11 @@ const DonateCaken = () => {
             <div className={style.found}>
               <h3 className={style.found_title}>{t(item.title)}</h3>
               <ul className={style.found_list}>
-                <li className={style.found_text}>{t("textPatreon")}</li>
-                <li className={style.found_text}>{t("textPatreon1")}</li>
+                <li className={style.found_text}>{t('textPatreon')}</li>
+                <li className={style.found_text}>{t('textPatreon1')}</li>
               </ul>
               <Link className={style.found_link} href={item.link}>
-                {t("suppotteam")}
+                {t('suppotteam')}
               </Link>
             </div>
             <div className={style.qr}>

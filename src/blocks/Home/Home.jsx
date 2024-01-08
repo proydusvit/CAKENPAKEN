@@ -1,16 +1,16 @@
-import Link from "next/link";
-import { useTranslation } from "next-i18next";
-import styles from "./Home.module.scss";
-import { useRouter } from "next/router";
-import Sponsor from "./Sponsor/Sponsor";
-import Help from "./Help/Help";
-import Soon from "@/assets/imgHome/soon.svg";
+import Link from 'next/link';
+import { useTranslation } from 'next-i18next';
+import styles from './Home.module.scss';
+import { useRouter } from 'next/router';
+import Sponsor from './Sponsor/Sponsor';
+import Help from './Help/Help';
+import Soon from '@/assets/imgHome/soon.svg';
 
 const Home = () => {
-  const { t } = useTranslation("home");
+  const { t } = useTranslation('home');
   const router = useRouter();
   const { locale } = router;
-  const isEnglish = locale === "en";
+  const isEnglish = locale === 'en';
 
   return (
     <section>
@@ -20,20 +20,21 @@ const Home = () => {
           href="/projects"
           className={`${styles.content} ${styles.content_img__gallery}`}
         >
-          {t("projects")}
+          {t('projects')}
         </Link>
         <div
           className={`${styles.content} ${styles.content_img}`}
           loading="lazy"
         >
           <div>
-            <p> {t("merch")}</p>
+            <p> {t('merch')}</p>
 
             <p className={styles.soon}>
               {isEnglish ? (
                 <Soon />
               ) : (
                 <svg
+                  style={{ transform: 'skewY(10deg)' }}
                   width="187"
                   height="77"
                   viewBox="0 0 177 87"
@@ -70,7 +71,7 @@ const Home = () => {
         </div>
 
         <Link className={styles.projects} href="/gallery" loading="lazy">
-          {t("gallery")}
+          {t('gallery')}
         </Link>
         <Help />
         <Link
@@ -78,14 +79,14 @@ const Home = () => {
           href="/team"
           className={`${styles.content} ${styles.content_img__crew} `}
         >
-          {t("crew")}
+          {t('crew')}
         </Link>
         <Link
           loading="lazy"
           href="/about"
           className={`${styles.content} ${styles.content_img__about}`}
         >
-          {t("about")}
+          {t('about')}
         </Link>
 
         <Sponsor />

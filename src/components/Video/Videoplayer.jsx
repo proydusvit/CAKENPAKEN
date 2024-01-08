@@ -1,4 +1,4 @@
-import styles from "./Video.module.scss"; // Стилі для компонента
+import styles from './Video.module.scss'; // Стилі для компонента
 
 const VideoPlayer = ({ videoId }) => {
   return (

@@ -1,21 +1,21 @@
-import Link from "next/link";
-import Image from "next/image";
+import Link from 'next/link';
+import Image from 'next/image';
 
-import styles from "./Sponsor.module.scss";
+import styles from './Sponsor.module.scss';
 
-import { useTranslation } from "next-i18next";
+import { useTranslation } from 'next-i18next';
 
-import SliderComponent from "components/slider/SliderComponent";
+import SliderComponent from 'components/slider/SliderComponent';
 
-import { listItems } from "./SponsorList";
+import { listItems } from './SponsorList';
 
 const SponsorAndHelp = () => {
-  const { t } = useTranslation("home");
+  const { t } = useTranslation('home');
 
   return (
     <>
       <div className={styles.sponsor}>
-        <h3 className={styles.spon}>{t("sponsors")}</h3>
+        <h3 className={styles.spon}>{t('sponsors')}</h3>
 
         <SliderComponent list={listItems} />
 

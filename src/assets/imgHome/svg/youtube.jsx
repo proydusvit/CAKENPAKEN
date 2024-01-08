@@ -1,8 +1,8 @@
-import style from "./svg.module.scss";
+import style from './svg.module.scss';
 const Youtube = () => {
   return (
     <div>
-      {" "}
+      {' '}
       <svg
         className={style.svg}
         width="40"

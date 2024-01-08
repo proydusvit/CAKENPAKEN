@@ -1,64 +1,61 @@
-import styles from "./SupportAndDonate.module.scss";
-import { useMediaQuery } from "@react-hook/media-query";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import { useState, useEffect } from "react";
-import { useTranslation } from "next-i18next";
+import styles from './SupportAndDonate.module.scss';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { useState, useEffect } from 'react';
+import { useTranslation } from 'next-i18next';
 
 const Support = () => {
   const { locale, locales, replace, pathname, asPath } = useRouter();
-  const { t } = useTranslation("common");
+  const { t } = useTranslation('common');
   const [currentLanguage, setCurrentLanguage] = useState(locale);
-  const [backgroundColor, setBackgroundColor] = useState("black");
-  const [color, setColor] = useState("white");
-  const [secondColor, setSecondColor] = useState("black");
-  const [border, setBorder] = useState("black");
+  const [backgroundColor, setBackgroundColor] = useState('black');
+  const [color, setColor] = useState('white');
+  const [secondColor, setSecondColor] = useState('black');
+  const [border, setBorder] = useState('black');
 
   useEffect(() => {
     const whiteBackgroundRoutes = [
-      "/projects/film",
-      "/projects/trail",
-      "/gallery/film",
-      "/gallery/trail",
-      "/about",
-      "/",
+      '/projects/film',
+      '/projects/trail',
+      '/gallery/film',
+      '/gallery/trail',
+      '/about',
+      '/',
     ];
 
     if (whiteBackgroundRoutes.includes(asPath)) {
-      setBackgroundColor("white");
-      setColor("black");
-      setSecondColor("white");
-      setBorder("white");
+      setBackgroundColor('white');
+      setColor('black');
+      setSecondColor('white');
+      setBorder('white');
     } else {
-      setBackgroundColor("black");
-      setColor("white");
+      setBackgroundColor('black');
+      setColor('white');
     }
   }, [asPath]);
 
-
   const toggleLanguage = () => {
-    const newLanguage = currentLanguage === "en" ? "uk" : "en";
+    const newLanguage = currentLanguage === 'en' ? 'uk' : 'en';
     setCurrentLanguage(newLanguage);
     replace(pathname, undefined, { locale: newLanguage });
   };
 
   return (
     <div className={styles.box}>
-      
       <div className={styles.support}>
         <Link
           href="/support"
           style={{ color: secondColor, border: `1px solid ${border}` }}
           className={styles.support__ukraine}
         >
-          {t("support")}
+          {t('support')}
         </Link>
         <Link
           href="/donate"
           style={{ backgroundColor: backgroundColor, color: color }}
           className={styles.support__donate}
         >
-          {t("donate")}
+          {t('donate')}
         </Link>
 
         <button
@@ -66,7 +63,7 @@ const Support = () => {
           className={styles.lang}
           onClick={toggleLanguage}
         >
-          {currentLanguage === "en" ? "EN" : "UA"}
+          {currentLanguage === 'en' ? 'EN' : 'UA'}
         </button>
       </div>
     </div>

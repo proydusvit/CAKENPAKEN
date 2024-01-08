@@ -1,5 +1,5 @@
-@import "../../styles/color";
-@import "../../styles/mixin";
+@import '../../styles/color';
+@import '../../styles/mixin';
 
 $small-screen: 767px;
 $medium-screen: 768px;
@@ -32,8 +32,8 @@ $large-screen: 1239px;
     letter-spacing: -0.88px;
     text-transform: capitalize;
 
-    color: getColor("white-for-text");
-    background-color: getColor("primary");
+    color: getColor('white-for-text');
+    background-color: getColor('primary');
     border-radius: 30px;
 
     width: 270px;
@@ -57,7 +57,7 @@ $large-screen: 1239px;
   }
 
   &__ukraine {
-    color: getColor("primary");
+    color: getColor('primary');
 
     padding: 10px 30px;
     margin-right: 30px;

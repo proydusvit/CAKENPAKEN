@@ -1,4 +1,4 @@
-import style from "./svg.module.scss";
+import style from './svg.module.scss';
 const Mail = () => {
   return (
     <div>

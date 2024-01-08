@@ -1,38 +1,38 @@
-import { useRouter } from "next/router";
-import { useState, useEffect } from "react";
+import { useRouter } from 'next/router';
+import { useState, useEffect } from 'react';
 
-import Link from "next/link";
-import Image from "next/image";
-import { useMediaQuery } from "@react-hook/media-query";
-import { useTranslation } from "next-i18next";
+import Link from 'next/link';
+import Image from 'next/image';
+import { useMediaQuery } from '@react-hook/media-query';
+import { useTranslation } from 'next-i18next';
 
-import styles from "./Header.module.scss";
-import Logo from "../../assets/images/Logo_header.png";
+import styles from './Header.module.scss';
+import Logo from '../../assets/images/Logo_header.png';
 
-import SocialMedia from "./SocialMedia/SocialMedia";
-import ButtonHeader from "./BtnHeader/ButtonHeader";
+import SocialMedia from './SocialMedia/SocialMedia';
+import ButtonHeader from './BtnHeader/ButtonHeader';
 
-import { listItems } from "./linkList";
+import { listItems } from './linkList';
 
 const Header = () => {
   const { pathname, asPath } = useRouter();
   const [isClicked, setIsClicked] = useState(false);
-  const { t } = useTranslation("common");
-  const [fill, setFill] = useState("black");
-  const isMobile = useMediaQuery("(max-width: 767px)");
-  const [backgroundColor, setBackgroundColor] = useState("black");
+  const { t } = useTranslation('common');
+  const [fill, setFill] = useState('black');
+  const isMobile = useMediaQuery('(max-width: 767px)');
+  const [backgroundColor, setBackgroundColor] = useState('black');
 
   useEffect(() => {
     const isWhiteBackgroundRoute = [
-      "/projects/film",
-      "/projects/trail",
-      "/gallery/film",
-      "/gallery/trail",
-      "/about",
-      "/",
+      '/projects/film',
+      '/projects/trail',
+      '/gallery/film',
+      '/gallery/trail',
+      '/about',
+      '/',
     ].includes(asPath);
     const newBackgroundColor =
-      isWhiteBackgroundRoute && isMobile ? "white" : "black";
+      isWhiteBackgroundRoute && isMobile ? 'white' : 'black';
     setBackgroundColor(newBackgroundColor);
   }, [asPath, isMobile]);
 
@@ -45,14 +45,14 @@ const Header = () => {
       <div className={styles.container}>
         <ButtonHeader handleClick={handleClick} isClicked={isClicked} />
 
-        <div className={`${styles.content} ${isClicked ? styles.visible : ""}`}>
+        <div className={`${styles.content} ${isClicked ? styles.visible : ''}`}>
           <div className={styles.donate_link}>
             <Link href="/support" className={styles.support}>
-              {t("support")}
+              {t('support')}
             </Link>
 
             <Link href="/donate" className={styles.donate}>
-              {t("donate")}
+              {t('donate')}
             </Link>
           </div>
 
@@ -66,7 +66,7 @@ const Header = () => {
                     <Link
                       href={href}
                       className={`${styles.link} ${
-                        pathname === href ? styles.active : ""
+                        pathname === href ? styles.active : ''
                       }`}
                     >
                       {t(text)}

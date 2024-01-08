@@ -1,30 +1,30 @@
-import { initLightboxJS, SlideshowLightbox } from "lightbox.js-react";
-import "lightbox.js-react/dist/index.css";
-import { CldImage } from "next-cloudinary";
-import { useEffect } from "react";
-import { useTranslation } from "next-i18next";
-import Image from "next/image";
-import styles from "./Foto.module.scss";
+import { initLightboxJS, SlideshowLightbox } from 'lightbox.js-react';
+import 'lightbox.js-react/dist/index.css';
+// import { CldImage } from 'next-cloudinary';
+// import { useEffect } from 'react';
+import { useTranslation } from 'next-i18next';
+import Image from 'next/image';
+import styles from './Foto.module.scss';
 
 const Foto = ({ image }) => {
-  const { t } = useTranslation("gallery");
+  const { t } = useTranslation('gallery');
   const sortedImages = image.slice().sort((a, b) => a.id - b.id);
   return (
     <>
       <SlideshowLightbox
         lightboxIdentifier="uniqueLightboxId"
         framework="next"
-        images={sortedImages.map((item) => ({
+        images={sortedImages.map(item => ({
           src: item.img, // Ensure that item.img is a valid image URL
-          alt: "Film",
+          alt: 'Film',
         }))}
       >
         <ul className={styles.list}>
-          {sortedImages.map((item) => (
+          {sortedImages.map(item => (
             <li
               style={{
-                position: "relative",
-                backgroundColor: "white",
+                position: 'relative',
+                backgroundColor: 'white',
               }}
               className={styles.item}
               key={item.id}
@@ -38,7 +38,7 @@ const Foto = ({ image }) => {
                 src={item.img}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 70vw"
                 style={{
-                  backgroundPosition: " 50% 50%",
+                  backgroundPosition: ' 50% 50%',
                 }}
               />
             </li>

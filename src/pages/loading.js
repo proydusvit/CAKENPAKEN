@@ -1,4 +1,4 @@
-import { Load } from "components/Loading/Loading.jsx";
+import { Load } from 'components/Loading/Loading.jsx';
 
 const Loading = () => {
   return (

@@ -1,4 +1,4 @@
-@import "../../styles//mixin";
+@import '../../styles//mixin';
 
 $small-screen: 767px;
 $medium-screen: 768px;
@@ -47,7 +47,7 @@ $large-screen: 1239px;
       rgba(0, 0, 0, 0.4),
       rgba(0, 0, 0, 0.4)
     ),
-    url("../../assets/imgProjects/film.webp");
+    url('../../assets/imgProjects/film.webp');
   @include backFoto;
 
   color: #fefefe;
@@ -77,6 +77,6 @@ $large-screen: 1239px;
         rgba(0, 0, 0, 0.4),
         rgba(0, 0, 0, 0.4)
       ),
-      url("https://res.cloudinary.com/dg6fnnbpd/image/upload/f_auto,q_auto/fc8sd0yxo3rki1vhsrfn");
+      url('https://res.cloudinary.com/dg6fnnbpd/image/upload/f_auto,q_auto/fc8sd0yxo3rki1vhsrfn');
   }
 }

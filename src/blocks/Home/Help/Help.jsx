@@ -1,18 +1,18 @@
-import styles from "./Help.module.scss";
+import styles from './Help.module.scss';
 
-import Link from "next/link";
-import Image from "next/image";
+import Link from 'next/link';
+import Image from 'next/image';
 
-import Logo from "@/assets/imgHome/help.png";
+import Logo from '@/assets/imgHome/help.png';
 
-import { useTranslation } from "next-i18next";
+import { useTranslation } from 'next-i18next';
 
 const Help = () => {
-  const { t } = useTranslation("home");
+  const { t } = useTranslation('home');
 
   return (
     <div className={styles.donate}>
-      <p>{t("donateU")}</p>
+      <p>{t('donateU')}</p>
       <div>
         <Link
           href="https://olympiccircle.org.ua/pro-nas/rekvizyty.html"

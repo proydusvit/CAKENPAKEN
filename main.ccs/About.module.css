@@ -3,7 +3,12 @@
   width: 100%;
   height: 777px;
   background: black;
-  background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("./img/main.jpg");
+  background-image: linear-gradient(
+      to bottom,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url('./img/main.jpg');
   background-size: cover;
   background-position: 50% 50%;
 }
@@ -64,4 +69,4 @@
 .box__text {
   width: 620px;
   margin-right: 40px;
-}/*# sourceMappingURL=About.module.css.map */
+} /*# sourceMappingURL=About.module.css.map */

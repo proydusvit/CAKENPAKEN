@@ -1,7 +1,7 @@
-import Header from "./Header/Header";
-import Meta from "../seo/Meta";
-import Footer from "./Footer/Footer";
-import Support from "./SupportAndDonate/SupportAndDonate";
+import Header from './Header/Header';
+import Meta from '../seo/Meta';
+import Footer from './Footer/Footer';
+import Support from './SupportAndDonate/SupportAndDonate';
 const Layout = ({ children, title, description }) => {
   return (
     <Meta title={title} description={description}>

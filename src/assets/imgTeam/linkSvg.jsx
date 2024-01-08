@@ -1,4 +1,4 @@
-import styles from "./linkSvg.module.scss";
+import styles from './linkSvg.module.scss';
 const linkTre = () => {
   return (
     <div>

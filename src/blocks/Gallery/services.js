@@ -1,9 +1,9 @@
-import axios from "axios";
+import axios from 'axios';
 
 async function fetchGallery({ locale, pageSize }) {
   try {
     const response = await axios.get(
-      `https://cakenpaken.onrender.com/api/foto-colections?populate=*&locale=${locale}}&pagination[pageSize]=${pageSize}`
+      `https://cakenpaken.onrender.com/api/foto-colections?populate=*&locale=${locale}}&pagination[pageSize]=${pageSize}`,
     );
     return response.data.data;
   } catch (error) {
@@ -14,7 +14,7 @@ async function fetchGallery({ locale, pageSize }) {
 async function fetchCategory({ locale }) {
   try {
     const response = await axios.get(
-      `https://cakenpaken.onrender.com/api/link-photos?populate=*&locale=${locale}`
+      `https://cakenpaken.onrender.com/api/link-photos?populate=*&locale=${locale}`,
     );
     return response.data.data;
   } catch (error) {

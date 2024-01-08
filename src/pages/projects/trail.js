@@ -1,11 +1,11 @@
-import Layout from "../../layout/Layout";
-import TrailRun from "../../blocks/Projects/Trail/Trail";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import Layout from '../../layout/Layout';
+import TrailRun from '../../blocks/Projects/Trail/Trail';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 export const getStaticProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["common", "projects"])),
+      ...(await serverSideTranslations(locale, ['common', 'projects'])),
       // Will be passed to the page component as props
     },
   };

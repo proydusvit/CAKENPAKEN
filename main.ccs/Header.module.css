@@ -88,6 +88,7 @@
   font-weight: 600;
   line-height: normal;
 }
-.link:hover, .link.active {
+.link:hover,
+.link.active {
   color: #000;
-}/*# sourceMappingURL=Header.module.css.map */
+} /*# sourceMappingURL=Header.module.css.map */

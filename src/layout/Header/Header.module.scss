@@ -47,7 +47,7 @@ $large-screen: 1239px;
     display: flex;
     opacity: 1;
     justify-content: space-between;
-    &[style*="opacity: 1"] {
+    &[style*='opacity: 1'] {
       background-color: white;
     }
   }

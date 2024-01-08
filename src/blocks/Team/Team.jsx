@@ -1,17 +1,17 @@
 // import axios from "axios";
 // import { useEffect, useState } from "react";
-import styles from "./Team.module.scss";
+import styles from './Team.module.scss';
 
-import { useTranslation } from "next-i18next";
+import { useTranslation } from 'next-i18next';
 // import { useRouter } from "next/router";
-import { listTeam, listTeamTwo } from "./listTeam";
-import FofoBox from "./FofoBox";
-import Section from "../../components/Section/Section";
+import { listTeam, listTeamTwo } from './listTeam';
+import FofoBox from './FofoBox';
+import Section from '../../components/Section/Section';
 
 const Team = () => {
   // const [data, setData] = useState([]);
   // const { locale } = useRouter();
-  const { t } = useTranslation("team");
+  const { t } = useTranslation('team');
 
   // useEffect(() => {
   //   const fetchData = async () => {
@@ -32,9 +32,9 @@ const Team = () => {
 
   return (
     <Section className={styles.section}>
-      <h1 className={styles.title}>{t("team")}</h1>
+      <h1 className={styles.title}>{t('team')}</h1>
       <FofoBox list={listTeam} />
-      <h2 className={styles.join}>{t("joined")}</h2>
+      <h2 className={styles.join}>{t('joined')}</h2>
       <FofoBox list={listTeamTwo} />
     </Section>
   );

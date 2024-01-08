@@ -1,20 +1,20 @@
-@import "../../../styles/color";
-@import "../../../styles/mixin";
+@import '../../../styles/color';
+@import '../../../styles/mixin';
 $small-screen: 767px;
 $medium-screen: 768px;
 $large-screen: 1239px;
 
 .mainFoto {
-  color: getColor("white-for-text");
+  color: getColor('white-for-text');
   width: 100%;
   height: 777px;
-  background: getColor("primary");
+  background: getColor('primary');
   background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0.4),
       rgba(0, 0, 0, 0.4)
     ),
-    url("https://res.cloudinary.com/dg6fnnbpd/image/upload/f_auto,q_auto/fc8sd0yxo3rki1vhsrfn");
+    url('https://res.cloudinary.com/dg6fnnbpd/image/upload/f_auto,q_auto/fc8sd0yxo3rki1vhsrfn');
   @include backFoto;
 
   display: flex;
