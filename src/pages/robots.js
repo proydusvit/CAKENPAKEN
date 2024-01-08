@@ -6,6 +6,6 @@ export default function robots() {
       disallow: '/private/',
     },
     sitemap:
-      'https://cakenpaken-6n28-git-main-proydusvit.vercel.app//sitemap.xml',
+      'https://cakenpaken-6n28-git-main-proydusvit.vercel.app/sitemap.xml',
   };
 }

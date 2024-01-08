@@ -12,11 +12,5 @@ export default function sitemap() {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
-    {
-      url: 'https://cakenpaken-6n28-git-main-proydusvit.vercel.app/blog',
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.5,
-    },
   ];
 }
