@@ -7,13 +7,13 @@ export default function sitemap() {
       priority: 1,
     },
     {
-      url: 'https://cakenpaken-6n28-git-main-proydusvit.vercel.app//about',
+      url: 'https://cakenpaken-6n28-git-main-proydusvit.vercel.app/about',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: 'https://cakenpaken-6n28-git-main-proydusvit.vercel.app//blog',
+      url: 'https://cakenpaken-6n28-git-main-proydusvit.vercel.app/blog',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.5,
